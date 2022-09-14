@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EGE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="../img/tildafavicon.ico">
+  <link rel="stylesheet" href="JetBrains.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page__body">
+  <main class="page__body-main">
+    <div class="time">
+      <span class="current-time js-current-date"></span>
+      <span class="current-time js-current-time"></span>
+      <span class="time__title vh">До следующего экзамена</span>
+      <!--
+      <div class="timer__column head vh fz72px">До печати</div>
+      <div class="timer__column head vh fz72px">До окончания экзамена</div>
+       -->
+      <div class="time-now">
+        <span class="time-now-column column-days">
+          <span class="time-now-column__count js-time-now-days">∞</span>
+          <span class="time-now-column__count-description js-description-days">ДНЕЙ</span>
+        </span>
+        <span class="time-now-column column-hours">
+          <span class="time-now-column__count js-time-now-hours">∞</span>
+          <span class="time-now-column__count-description js-description-hours">ЧАСОВ</span>
+        </span>
+        <span class="time-now-column column-mins">
+          <span class="time-now-column__count js-time-now-mins">∞</span>
+          <span class="time-now-column__count-description js-description-mins">МИНУТ</span>
+        </span>
+        <span class="time-now-column column-seconds">
+          <span class="time-now-column__count js-time-now-seconds">∞</span>
+          <span class="time-now-column__count-description js-description-seconds">СЕКУНД</span>
+        </span>
+      </div>
+    </div>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>

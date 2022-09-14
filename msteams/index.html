@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Microsoft Teams</title>
+  <link rel="stylesheet" href="../flex-style.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/vue@2"></script>
+  <!-- <script src="https://unpkg.com/vue@next"></script> -->
+  <!-- production-версия, оптимизированная для размера и скорости -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2"></script> -->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+  <ol>
+    <li class="df ffdc">
+      <span>Microsoft Teams</span>
+      <span><a href="https://teams.microsoft.com/" target="_blank">https://teams.microsoft.com</a></span>
+    </li>
+  </ol>
+  <div id="app">
+    <ul class="list collection">
+      <li class="list__item collection-item" v-for="(item, index) in itemList" v-bind:key="item.id">
+        <span v-if="item.fio">
+          <strong>{{ ++index }}. ФИО:</strong> {{ item.fio }}
+        </span>
+        <span>
+          <strong>Логин:</strong> {{ item.login }}
+        </span>
+        <span>
+          <strong>Пароль:</strong>  {{ item.pass }}
+        </span>
+      </li>
+
+    </ul>
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        message: 'Привет, 123Vue!123',
+        initialized: false,
+        itemList: [],
+        pageNumber: 0,
+        itemOnPage: 7,
+        pageCount: 0,
+      },
+      methods: {
+        trySortByFio: function (d1, d2) {
+          //функция для сортировани по фио
+          if (d1.fio.toLowerCase() > d2.fio.toLowerCase()) {
+            return 1;
+          }
+          if (d1.fio.toLowerCase() < d2.fio.toLowerCase()) {
+            return -1;
+          }
+          if (d1.fio.toLowerCase() === d2.fio.toLowerCase()) {
+            return 0;
+          }
+        },
+        LastAlphabet: function (NumberYear) {
+          // let LastAlphabet = function (NumberYear) {
+          let ageLastNumber = NumberYear % 10;
+          if (ageLastNumber == 0 || ageLastNumber >= 5 && ageLastNumber <= 9)
+            return "лет"
+          if (ageLastNumber >= 2 && ageLastNumber <= 4)
+            return "года"
+          if (ageLastNumber > 10 && ageLastNumber < 15)
+            return "лет"
+          if (NumberYear % 100 > 10 && NumberYear % 100 < 15)
+            return old = "Р»РµС‚"
+          if (ageLastNumber == 1)
+            return old = "год"
+          }
+        },
+      mounted() {
+        const URL = "https://raw.githubusercontent.com/mifomen/lic28/master/src/msteams/list.json";
+        try {
+          fetch(URL)
+            .then((response) => response.json())
+            .then((json) => (this.itemList = json.sort(this.trySortByFio)))
+            .then((this.initialized = true));
+            } catch (errors) {
+              console.error("errors ", errors);
+            }
+        }
+      })
+  </script>
+</body>
+</html>
