@@ -26,7 +26,7 @@
   <div id="app">
     <ul class="list collection">
       <li class="list__item collection-item" v-for="(item, index) in itemList" v-bind:key="item.id">
-        <span v-if="item.fio">
+        <span v-if="initialized">
           <strong>{{ ++index }}. ФИО:</strong> {{ item.fio }}
         </span>
         <span>
