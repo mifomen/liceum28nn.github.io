@@ -1938,16 +1938,16 @@ td.ta-l {
 
     const allCells = document.querySelectorAll('.cabinet-table__cell');
 
-    for ( const cell of allCells) {
-      if (cell.textContent.indexOf("/") > -1 ) {
-        cell.classList.add('cabinet-table__table--english');
+    for ( let i=0; i<allCells.length; i++) {
+      if (allCells[i].textContent.indexOf("/") > -1 ) {
+        allCells[i].classList.add('cabinet-table__table--english');
       }
-      if (cell.textContent.indexOf("|") > -1 ) {
-        cell.classList.add('cabinet-table__table--informatics');
+      if (allCells[i].textContent.indexOf("|") > -1 ) {
+        allCells[i].classList.add('cabinet-table__table--informatics');
       }
-      if (cell.textContent.toLowerCase().indexOf("зал") > -1 ) {
-        // console.log(cell.textContent.toLowerCase())
-        cell.classList.add('cabinet-table__table--phis-ra');
+      if (allCells[i].textContent.toLowerCase().indexOf("зал") > -1 ) {
+        // console.log(allCells[i].textContent.toLowerCase())
+        allCells[i].classList.add('cabinet-table__table--phis-ra');
       }
       // console.log(cell.textContent.indexOf("|"))
     }
