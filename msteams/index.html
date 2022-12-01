@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head class="head">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,7 +16,7 @@
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
-<body>
+<body class="vh">
   <ol>
     <li class="df ffdc">
       <span>Microsoft Teams</span>
@@ -50,6 +50,8 @@
         itemOnPage: 7,
         pageCount: 0,
         index: 0,
+        password: 'ydadonov',
+        pass: 'password',
       },
       methods: {
         trySortByFio: function (d1, d2) {
@@ -89,7 +91,17 @@
             } catch (errors) {
               console.error("errors ", errors);
             }
-        }
+        this.pass = prompt('Введите пароль', this.pass);
+        console.log()
+          if  (this.pass === this.password) {
+            document.body.classList.remove('vh');
+            console.log('succ')
+          } else {
+            document.body.remove()
+            // document.scripts.remove()
+            document.querySelector('.head').textContent="";
+          }
+        },
       })
   </script>
 </body>
