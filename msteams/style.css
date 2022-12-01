@@ -10,3 +10,8 @@
 .list__item span {
   width: 100%;
 }
+
+
+.vh {
+  display: none;
+}
