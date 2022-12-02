@@ -107,6 +107,30 @@
 }
 
 
+@-webkit-keyframes AnimationBorderBlue {
+	0%,
+	to {
+		border: 5px solid #2018ca
+	}
+	50% {
+		border: 5px solid #6a89e2
+	}
+}
+
+@keyframes AnimationBorderBlue {
+	0%,
+	to {
+		border: 5px solid #2018ca
+	}
+	50% {
+		border: 5px solid #6a89e2
+  }
+}
+
+.AniBorderBlue {
+	-webkit-animation: AnimationBorderBlue 5s infinite ease;
+	animation: AnimationBorderBlue 5s infinite ease
+}
 
 .cabinet-table {
   /* outline-offset: -1px; */
@@ -275,6 +299,11 @@ td.ta-l {
   padding: 5px 10px;
 }
 
+.now-time--saturday {
+  left: 0;
+  right: auto;
+}
+
 .fz28 {
   font-size: 28px;
 }
@@ -310,7 +339,7 @@ td.ta-l {
 </head>
 <body class="page-body">
 
-  <span class="js-now-time hidden now-time"></span>
+  <span class="js-now-time hidden now-time "></span>
 
   <input class="day__button day__button-1" type="radio" name="days" id="day-1" checked>
   <input class="day__button day__button-2" type="radio" name="days" id="day-2">
@@ -1641,10 +1670,18 @@ td.ta-l {
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">1.</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
+        <td colspan="4" rowspan="7" class="cabinet-table__cell AniBorderBlue">
+          В связи с проведением отборочного этапа <br>
+          олимпиады БИБН по биологии режим на <u>сегодня</u>,<br>
+          03.12.22 изменен.<br>
+          Расписание звонков:<br>
+          1 урок – 08.00 – 08.30<br>
+          2 урок – 08.40 – 09.10<br>
+          3 урок – 09.20 – 09.50<br>
+          4 урок – 10.00 – 10.30<br>
+          5 урок – 10.40 – 11.10<br>
+          6 урок – 11.20 – 11.50
+        </td>
         <td class="cabinet-table__cell">---</td>
         <td class="cabinet-table__cell cabinet-table__table--phis-ra">ЗАЛ</td>
         <td class="cabinet-table__cell">16</td>
@@ -1660,10 +1697,7 @@ td.ta-l {
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">2.</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
+
         <td class="cabinet-table__cell">---</td>
         <td class="cabinet-table__cell">5</td>
         <td class="cabinet-table__cell">21</td>
@@ -1679,10 +1713,7 @@ td.ta-l {
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">3.</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
+
         <td class="cabinet-table__cell cabinet-table__table--phis-ra">ЗАЛ</td>
         <td class="cabinet-table__cell">5</td>
         <td class="cabinet-table__cell">6</td>
@@ -1698,10 +1729,7 @@ td.ta-l {
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">4.</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
+
         <td class="cabinet-table__cell">5</td>
         <td class="cabinet-table__cell">6</td>
         <td class="cabinet-table__cell">21</td>
@@ -1717,10 +1745,7 @@ td.ta-l {
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">5.</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
+
         <td class="cabinet-table__cell">21</td>
         <td class="cabinet-table__cell">---</td>
         <td class="cabinet-table__cell">16</td>
@@ -1736,10 +1761,7 @@ td.ta-l {
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">6.</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
+
         <td class="cabinet-table__cell">6</td>
         <td class="cabinet-table__cell">---</td>
         <td class="cabinet-table__cell">---</td>
@@ -1755,10 +1777,7 @@ td.ta-l {
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">7.</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell">---</td>
+
         <td class="cabinet-table__cell">---</td>
         <td class="cabinet-table__cell">---</td>
         <td class="cabinet-table__cell">---</td>
@@ -1926,11 +1945,34 @@ td.ta-l {
 
     // mifomen
     const url = `#day-${new Date().getDay()}`;
-    // const url = '#day-5';
+    // const url = '#day-6';
 
     if (document.querySelector(url)) {
       document.querySelector(url).checked = true;
     }
+
+    const allSelectBtn = document.querySelectorAll('.day__button');
+     for ( const btn of allSelectBtn) {
+      btn.addEventListener('click', (evt) => {
+        if (evt.target.id==='day-6') {
+          document.querySelector('.js-now-time').classList.add('now-time--saturday')
+          // document.querySelector('.js-now-time').classList.add('now-time--saturday')
+        } else {
+          document.querySelector('.js-now-time').classList.remove('now-time--saturday')
+        }
+      })
+     };
+
+
+    // console.log(`document.querySelector('#day-6').checked=${document.querySelector('#day-6').checked}`)
+    // if (document.querySelector('#day-6').checked ==true) {
+    //   console.log('true');
+    //   // if (document.querySelector('.js-now-time')) {
+    //     document.querySelector('.js-now-time').classList.add('now-time--saturday')
+    //   // }
+    // }
+
+    console.log(`document.querySelector('#day-6').checked=${document.querySelector('#day-6').checked}`)
 
     const onScrollFixedLabelList = () => {
       const labelList = document.querySelector('.label__list');
