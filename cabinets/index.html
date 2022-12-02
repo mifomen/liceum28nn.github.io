@@ -1952,17 +1952,19 @@ td.ta-l {
       document.querySelector(url).checked = true;
     }
 
+    changePositionTimer = (evt) => {
+      if (evt.target.id==='day-6') {
+        document.querySelector('.js-now-time').classList.add('now-time--saturday')
+        // document.querySelector('.js-now-time').classList.add('now-time--saturday')
+      } else {
+        document.querySelector('.js-now-time').classList.remove('now-time--saturday')
+      }
+    }
+
     const allSelectBtn = document.querySelectorAll('.day__button');
-     for ( const btn of allSelectBtn) {
-      btn.addEventListener('click', (evt) => {
-        if (evt.target.id==='day-6') {
-          document.querySelector('.js-now-time').classList.add('now-time--saturday')
-          // document.querySelector('.js-now-time').classList.add('now-time--saturday')
-        } else {
-          document.querySelector('.js-now-time').classList.remove('now-time--saturday')
-        }
-      })
-     };
+      for ( const btn of allSelectBtn) {
+        btn.addEventListener('click', changePositionTimer)
+      };
 
 
     // console.log(`document.querySelector('#day-6').checked=${document.querySelector('#day-6').checked}`)
@@ -1973,7 +1975,7 @@ td.ta-l {
     //   // }
     // }
 
-    console.log(`document.querySelector('#day-6').checked=${document.querySelector('#day-6').checked}`)
+    // console.log(`document.querySelector('#day-6').checked=${document.querySelector('#day-6').checked}`)
 
     const onScrollFixedLabelList = () => {
       const labelList = document.querySelector('.label__list');
