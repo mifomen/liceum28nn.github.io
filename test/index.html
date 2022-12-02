@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="roboto.css" rel="stylesheet">
+    <title>Test</title>
+  </head>
+  <body class="page-body"">
+    <form class="frame-init-game">
+      <label class="label__tester-info" for="tester-info">Введите свою фамилию и имя</label>
+      <input autocomplete="off" placeholder="Горемыка Иван 11А" id="tester-info" type="text" class="tester-info" maxlength="35">
+      <button disabled data-name-test="questions1.json" class="btn-start-test js-btn-start" type="button">Тест по pascal array</button>
+      <button disabled data-name-test="questions2.json" class="btn-start-test js-btn-start" type="button">Начать тест2</button>
+      <button disabled data-name-test="questions3.json" class="btn-start-test js-btn-start" type="button">Начать тест3</button>
+      <button disabled data-name-test="questions4.json" class="btn-start-test js-btn-start" type="button">Начать тест4</button>
+    </form>
+    <div class="frame-start-game js-init-game hidden"></div>
+    <script src="api.js" type="module"></script>
+  </body>
+</html>
