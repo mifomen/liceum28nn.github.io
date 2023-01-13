@@ -1,13 +1,8 @@
 # liceum28nn.github.io
-liceum28nn.github.io
+## liceum28nn.github.io
+### Школьный информатор под 1366*768
 
-
-https://liceum28nn.github.io/cabinets/index.html
-
-<code>I get 10 times more traffic from [Google][1] than from
-[Yahoo][2] or [MSN][3].
-
-[1]: http://google.com/        "Google"
-[2]: http://search.yahoo.com/  "Yahoo Search"
-[3]: http://search.msn.com/    "MSN Search"
-</code>
+<code>[Тег1][[Адрес ссылки](https://liceum28nn.github.io/cabinets/index.html)]</code>
+<code>[Тег1][[Адрес ссылки](https://liceum28nn.github.io/cabinets/index-summer.html)]</code>
+<code>[Тег1][[Адрес ссылки](https://liceum28nn.github.io/timer/index.html)]</code>
+<code>[Тег1][[Адрес ссылки](https://liceum28nn.github.io/test/index.html)]</code>
