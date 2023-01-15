@@ -145,7 +145,7 @@
 /* .cabinet-table td { */
 .cabinet-table__cell-special-descriptions,
 .cabinet-table__cell {
-  border: 2px solid #000000;
+  border: 3px solid #000000;
   /* outline: 2px solid #000; */
   /* outline-offset: 0px; */
   padding: 5px 9px;
@@ -554,6 +554,7 @@ td.ta-l {
         <td class="cabinet-table__cell cabinet-table__table--phis-ra">ЗАЛ</td>
         <td class="cabinet-table__cell">21</td>
         <td class="cabinet-table__cell">22</td>
+        <td class="cabinet-table__cell cabinet-table__table--special-lessons" colspan="9">↓ Спецкурсы ↓</td>
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">2.</td>
@@ -564,7 +565,11 @@ td.ta-l {
         <td class="cabinet-table__cell cabinet-table__table--phis-ra">ЗАЛ</td>
         <td class="cabinet-table__cell cabinet-table__table--english">8/19</td>
         <td class="cabinet-table__cell">17</td>
-        <td class="cabinet-table__cell cabinet-table__table--special-lessons" colspan="9">Спецкурсы</td>
+        <td class="cabinet-table__cell-special-descriptions" colspan="9" rowspan="5">
+          <strong>14:10 Баринова М.В. 20 каб.</strong> <br> Математика интенсив, 8е классы, <br>
+          <strong>14:10 Плакинса Т.Ю. 14 каб.</strong> <br> "За страницами учебника по биологии", <br>
+          <strong>14:10. Мацокина Г.Ф.  6 каб.</strong> <br> "Химия в эксперементах и расчетных задачах",<br>
+        </td>
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">3.</td>
@@ -575,11 +580,7 @@ td.ta-l {
         <td class="cabinet-table__cell cabinet-table__table--english">8/19</td>
         <td class="cabinet-table__cell">17</td>
         <td class="cabinet-table__cell">10</td>
-        <td class="cabinet-table__cell-special-descriptions" colspan="9" rowspan="4">
-          <strong>14:10 Баринова М.В. 20 каб.</strong> <br> Математика интенсив, 8е классы, <br>
-          <strong>14:10 Плакинса Т.Ю. 14 каб.</strong> <br> "За страницами учебника по биологии", <br>
-          <strong>14:10. Мацокина Г.Ф.  6 каб.</strong> <br> "Химия в эксперементах и расчетных задачах",<br>
-        </td>
+
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">4.</td>
@@ -1941,8 +1942,8 @@ td.ta-l {
     const updateTime = setInterval( setTime, 1000 );
 
     // mifomen
-    // const url = `#day-${new Date().getDay()}`;
-    const url = '#day-1';
+    const url = `#day-${new Date().getDay()}`;
+    // const url = '#day-1';
 
     if (document.querySelector(url)) {
       document.querySelector(url).checked = true;
