@@ -171,7 +171,7 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
   spanElement.onselectstart = 'return false';
   spanElement.onmousedown = 'return false';
   spanElement.innerHTML=`${localStorage.userName} получил:<br>${pointsTesting} баллов из ${choosenAnswers.length}<br>
-  Оценка 3 если > ${Math.round(choosenAnswers.length*0.5)} правильных ответов (50%)<br>
+  Оценка 3 если > ${Math.floor(choosenAnswers.length*0.5)} правильных ответов (50%)<br>
   Оценка 4 если > ${Math.round(choosenAnswers.length*0.75)} правильных ответов (75%)<br>
   Оценка 5 если > ${Math.round(choosenAnswers.length*0.9)} правильных ответов (90%)<br>
   `;
