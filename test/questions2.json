@@ -99,9 +99,23 @@
   },
   {
     "id": 14,
-    "qustionText": "a:=25; b:= 17; d:= a mod 5; e:=b mod 3; a:=d*2-e; b:= a * 2; a:=a-3; Чему равно значение b?",
+    "qustionText": "Каким будет значение переменной \"b\" после выполнения следующих команд в Pascal <br> a:=25; b:= 17; d:= a mod 5; e:=b mod 3; a:=d*2-e; a:=a-3; b:= a * 2; ",
     "questionImg": "test2",
     "questionAudio": "name2",
-    "arrayAnswers": ["-4","-2","5","8"]
+    "arrayAnswers": ["-10","-4","5","8"]
+  },
+  {
+    "id": 15,
+    "qustionText": "Что в паскале называют операторными скобками?",
+    "questionImg": "test2",
+    "questionAudio": "name2",
+    "arrayAnswers": ["begin end","{}","[]","begin and"]
+  },
+  {
+    "id": 16,
+    "qustionText": "Укажите правильную последовательность разделов, чтобы программа работала",
+    "questionImg": "test2",
+    "questionAudio": "name2",
+    "arrayAnswers": ["program; uses; const; var; begin end;","program; const; uses; var; begin end;","program; var; uses; const;  begin end;","uses; program; const; var; begin end;"]
   }
 ]
