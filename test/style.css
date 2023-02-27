@@ -239,18 +239,18 @@ h1 {
 text-decoration: underline;
 }
 .rightResaultAnswer {
-
+color: #fff;
+}
 
 .loseResaultAnswer {
-
+color: #fff;
 }
 
 .corrent-answer {
   text-decoration: underline;
 }
-}
+
 
 .not-corrent-answer {
   text-decoration-line: line-through;
-
 }
