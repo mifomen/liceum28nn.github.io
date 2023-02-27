@@ -228,6 +228,12 @@ h1 {
  align-items: center;
 
 }
+.resaultAnswerFinal {
+ order: -1;
+ /* width: 100%; */
+ grid-column-start: -1;
+ grid-column-end: 1;
+}
 
 .red {
 text-decoration: underline;

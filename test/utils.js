@@ -104,7 +104,28 @@ const showLocal = () => {
   }
 };
 
+const pointsResault = (numberItem) => {
+ if (Math.round(numberItem*0.5) < numberItem) {
+   return '2';
+ }
+ if (Math.round(numberItem*0.5) > numberItem) {
+  numberItem
+   return '3';
+ }
+ if (Math.round(numberItem*0.75) > numberItem) {
+  numberItem
+   return '4';
+ }
+ if (Math.round(numberItem*0.9) > numberItem) {
+  numberItem
+   return '5';
+ }
+//  Оценка 2 если < ${)} правильных ответов (50%)<br>
+//  Оценка 3 если > ${Math.round(choosenAnswers.length*0.5)} правильных ответов (50%)<br>
+//  Оценка 4 если > ${Math.round(choosenAnswers.length*0.75)} правильных ответов (75%)<br>
+//  Оценка 5 если > ${Math.round(choosenAnswers.length*0.9)} правильных ответов (90%)<br>
 
+}
 
 
 const getData = (onSuccess) => {
@@ -126,6 +147,7 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
   for (let i = 0; i < arrayGetAnswer.length; i++) {
     const spanElement = document.createElement('span');
     spanElement.classList.add('resaultAnswer');
+
     spanElement.onselectstart = 'return false';
     spanElement.onmousedown = 'return false';
 
@@ -145,9 +167,14 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
 
   const spanElement = document.createElement('span');
   spanElement.classList.add('resaultAnswer');
+  spanElement.classList.add('resaultAnswerFinal');
   spanElement.onselectstart = 'return false';
   spanElement.onmousedown = 'return false';
-  spanElement.innerHTML=`${localStorage.userName} получил:<br>${pointsTesting} баллов из ${choosenAnswers.length}`;
+  spanElement.innerHTML=`${localStorage.userName} получил:<br>${pointsTesting} баллов из ${choosenAnswers.length}<br>
+  Оценка 3 если > ${Math.round(choosenAnswers.length*0.5)} правильных ответов (50%)<br>
+  Оценка 4 если > ${Math.round(choosenAnswers.length*0.75)} правильных ответов (75%)<br>
+  Оценка 5 если > ${Math.round(choosenAnswers.length*0.9)} правильных ответов (90%)<br>
+  `;
   div.appendChild(spanElement);
   document.body.appendChild(div);
 };

@@ -93,6 +93,7 @@ const checkEveryName = (item) => {
 };
 
 const inputTesterName = document.querySelector('.tester-info');
+inputTesterName.value = `${name}`
 inputTesterName.focus();
 inputTesterName.addEventListener('input', () => {
   const valueLength = inputTesterName.value.length;
