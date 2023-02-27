@@ -126,6 +126,7 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
   for (let i = 0; i < arrayGetAnswer.length; i++) {
     const spanElement = document.createElement('span');
     spanElement.classList.add('resaultAnswer');
+
     spanElement.onselectstart = 'return false';
     spanElement.onmousedown = 'return false';
 
@@ -145,6 +146,7 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
 
   const spanElement = document.createElement('span');
   spanElement.classList.add('resaultAnswer');
+  spanElement.classList.add('resaultAnswerFinal');
   spanElement.onselectstart = 'return false';
   spanElement.onmousedown = 'return false';
   spanElement.innerHTML=`${localStorage.userName} получил:<br>${pointsTesting} баллов из ${choosenAnswers.length}`;
