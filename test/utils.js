@@ -153,11 +153,18 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
 
     if (choosenAnswers[i] === arrayRightAnswer[i].arrayAnswers[0]) {
       spanElement.classList.add('rightResaultAnswer');
-      spanElement.innerHTML = `В вопросе №${i + 1}. <br> ${arrayRightAnswer[i].qustionText} <br> Ваш ответ правильный:   <span class="corrent-answer">${arrayRightAnswer[i].arrayAnswers[0]}</span>`;
+      spanElement.innerHTML = `
+      В вопросе №${i + 1}: <u> ${arrayRightAnswer[i].qustionText}</u>
+      <span>Ваш ответ: <span class="red">правильный</span></span>
+      <span class="corrent-answer">${arrayRightAnswer[i].arrayAnswers[0]}</span>`;
       pointsTesting++
     } else {
       spanElement.classList.add('loseResaultAnswer');
-      spanElement.innerHTML = `В вопросе №${i + 1}. <br> ${arrayRightAnswer[i].qustionText} <br> Ваш ответ: <span class="red">неправильный</span><span class="not-corrent-answer">${arrayGetAnswer[i]}</span>Правильный ответ: ${arrayRightAnswer[i].arrayAnswers[0]}`;
+      spanElement.innerHTML = `
+      В вопросе №${i + 1}: <u> ${arrayRightAnswer[i].qustionText} </u>
+      <span>Ваш ответ: <span class="red">неправильный</span></span>
+      <span class="not-corrent-answer">${arrayGetAnswer[i]}</span>
+      <span>Правильный ответ: ${arrayRightAnswer[i].arrayAnswers[0]}</span>`;
     }
     div.appendChild(spanElement);
   }
