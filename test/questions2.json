@@ -1,24 +1,24 @@
 [
   {
     "id": 1,
-    "qustionText": "Выберите правильный ответ <br> 6 mod 3 = ?",
+    "qustionText": "Выберите правильный ответ <br> 8 mod 3 = ?",
     "questionImg": "",
     "questionAudio": "",
-    "arrayAnswers": ["0","2","1","3"]
-  },
-  {
-    "id": 2,
-    "qustionText": "Выберите правильный ответ <br> 6 div 3 = ?",
-    "questionImg": "test2",
-    "questionAudio": "name2",
     "arrayAnswers": ["2","0","1","3"]
   },
   {
-    "id": 3,
-    "qustionText": "Выберите правильный ответ <br> 7 div 4 = ?",
+    "id": 2,
+    "qustionText": "Выберите правильный ответ <br> 6 div 4 = ?",
     "questionImg": "test2",
     "questionAudio": "name2",
     "arrayAnswers": ["1","2","0","3"]
+  },
+  {
+    "id": 3,
+    "qustionText": "Выберите правильный ответ <br> 13 div 3 = ?",
+    "questionImg": "test2",
+    "questionAudio": "name2",
+    "arrayAnswers": ["4","2","0","1"]
   },
   {
     "id": 3,
@@ -117,5 +117,19 @@
     "questionImg": "test2",
     "questionAudio": "name2",
     "arrayAnswers": ["program; uses; const; var; begin end;","program; const; uses; var; begin end;","program; var; uses; const;  begin end;","uses; program; const; var; begin end;"]
+  },
+  {
+    "id": 17,
+    "qustionText": "В переменной \"a\" собираются хранить 1 символ, какой тип данных подойдет?",
+    "questionImg": "test2",
+    "questionAudio": "name2",
+    "arrayAnswers": ["char","boolean","real","string"]
+  },
+  {
+    "id": 17,
+    "qustionText": "В переменной \"a\" собираются хранить строчку символов, какой тип данных подойдет?",
+    "questionImg": "test2",
+    "questionAudio": "name2",
+    "arrayAnswers": ["string","char","boolean","real"]
   }
 ]
