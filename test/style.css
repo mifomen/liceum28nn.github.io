@@ -152,10 +152,10 @@ h1 {
   text-align: center;
   margin-top: 5%;
   font-size: 32px;
-  text-shadow: 1px 1px 1px var(--basic-white),
-  1px -1px 1px var(--basic-white),
-  -1px 1px 1px var(--basic-white),
-  -1px -1px 1px var(--basic-white);
+  text-shadow: 1px 1px 1px var(--basic-black),
+  1px -1px 1px var(--basic-black),
+  -1px 1px 1px var(--basic-black),
+  -1px -1px 1px var(--basic-black);
   padding: 15px;
   border: 25px double var(--basic-white);
   width: 85%;
