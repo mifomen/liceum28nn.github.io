@@ -15,7 +15,9 @@ h1 {
 *::after,
 *::before {
   box-sizing: padding-box;
-  font-family: "Roboto", sans-serif;
+  font-family: 'JetBrains Mono','Times New Roman', 'Roboto', arial;
+  /* "Central-Regular", arial; */
+  /* ,"Roboto","Times new roman", sans-serif; */
 }
 
 .hidden {
@@ -238,11 +240,12 @@ h1 {
   border: 2px solid var(--basic-white);
   border-radius: 20px;
   padding: 20px;
- display: flex;
- flex-wrap: wrap;
- justify-content: center;
- text-align: center;
- align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
 
 }
 .resaultAnswerFinal {

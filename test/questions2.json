@@ -57,7 +57,7 @@
   },
   {
     "id": 8,
-    "qustionText": "Выберите команду для ввода значений нескольких переменных a,b,c \"Константы\"",
+    "qustionText": "Выберите команду для ввода значений нескольких переменных \"a,b,c\" ",
     "questionImg": "test2",
     "questionAudio": "name2",
     "arrayAnswers": ["readln(a,b,c);","a,b,c:=random(30);","write(a,b,c);","a,b,c:=readkey;"]

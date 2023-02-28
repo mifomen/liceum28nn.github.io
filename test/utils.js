@@ -153,11 +153,11 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
 
     if (choosenAnswers[i] === arrayRightAnswer[i].arrayAnswers[0]) {
       spanElement.classList.add('rightResaultAnswer');
-      spanElement.innerHTML = `В вопросе №${i + 1}. Ваш ответ правильный:   <span class="corrent-answer">${arrayRightAnswer[i].arrayAnswers[0]}</span>`;
+      spanElement.innerHTML = `В вопросе №${i + 1}. <br> ${arrayRightAnswer[i].qustionText} <br> Ваш ответ правильный:   <span class="corrent-answer">${arrayRightAnswer[i].arrayAnswers[0]}</span>`;
       pointsTesting++
     } else {
       spanElement.classList.add('loseResaultAnswer');
-      spanElement.innerHTML = `В вопросе №${i + 1}. Ваш ответ &nbsp <span class="red">неправильный</span>:&nbsp<span class="not-corrent-answer">${arrayGetAnswer[i]}</span>`;
+      spanElement.innerHTML = `В вопросе №${i + 1}. <br> ${arrayRightAnswer[i].qustionText} <br> Ваш ответ: <span class="red">неправильный</span><span class="not-corrent-answer">${arrayGetAnswer[i]}</span>Правильный ответ: ${arrayRightAnswer[i].arrayAnswers[0]}`;
     }
     div.appendChild(spanElement);
   }
@@ -171,8 +171,8 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
   spanElement.onselectstart = 'return false';
   spanElement.onmousedown = 'return false';
   spanElement.innerHTML=`${localStorage.userName} получил:<br>${pointsTesting} баллов из ${choosenAnswers.length}<br>
-  Оценка 3 если > ${Math.floor(choosenAnswers.length*0.5)} правильных ответов (50%)<br>
-  Оценка 4 если > ${Math.round(choosenAnswers.length*0.75)} правильных ответов (75%)<br>
+  Оценка 3 если >= ${Math.floor(choosenAnswers.length*0.5)} правильных ответов (50%)<br>
+  Оценка 4 если >= ${Math.round(choosenAnswers.length*0.75)} правильных ответов (75%)<br>
   Оценка 5 если > ${Math.round(choosenAnswers.length*0.9)} правильных ответов (90%)<br>
   `;
   div.appendChild(spanElement);
