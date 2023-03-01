@@ -1,11 +1,15 @@
 // import { points } from './data.js';
 import { getData, renderTextQuestion, shuffleArray, renderAnswerArray } from './utils.js';
 
+const template = /\d\w/;
+// console.log(template.test("8Б"))
 
-const template = /^\D\D\s\D\D\s?\d\D/;
-
-const name = 'Горемыка Иван 11А';
-console.log(`template.test(name)=${template.test(name)}`)
+const person = {
+  surname:"Горемыка",
+  name:"Иван",
+  class:"8А"
+};
+// console.log(`template.test(name)=${template.test(name)}`)
 
 let randomLineQuests = []; // = shuffleArray(DATA);
 const btnStartTest = document.querySelector('.btn-start-test');
@@ -43,12 +47,12 @@ for (const allBtn of allBtns) {
 
 const startGame = () => {
   document.querySelector('.frame-init-game').classList.add('hidden');
-  if (document.querySelector('.tester-info').value =='') {
-    localStorage.userName = document.querySelector('.tester-info').placeholder
-  } else {
-    localStorage.userName = document.querySelector('.tester-info').value;
-  }
-
+  // if (document.querySelector('.tester-info').value =='') {
+  //   localStorage.userName = document.querySelector('.tester-info').placeholder
+  // } else {
+  //   localStorage.userName = document.querySelector('.tester-info').value;
+  // }
+  localStorage.user = `${inputTesterSurname.value} ${inputTesterName.value}  ${inputTesterClass.value}`
 
   getData((questionArray) => {
     randomLineQuests = shuffleArray(questionArray);
@@ -75,6 +79,7 @@ const btnStartDisabled = (state) => {
 };
 
 const valueToArray = function (item) {
+  // console.log(`item.value.split(' ')=${item.value.split(' ')}`)
   return item.value.split(' ');
 };
 
@@ -92,23 +97,62 @@ const checkEveryName = (item) => {
   }
 };
 
-const inputTesterName = document.querySelector('.tester-info');
-inputTesterName.value = `${name}`
-inputTesterName.focus();
+const inputTesterName = document.querySelector('.js-tester-info__name');
+const inputTesterSurname = document.querySelector('.js-tester-info__surname');
+const inputTesterClass = document.querySelector('.js-tester-info__class');
+
+// inputTesterName.value = `${name}`;
+
+inputTesterName.placeholder = `${person.name}`;
+inputTesterSurname.placeholder = `${person.surname}`;
+inputTesterClass.placeholder = `${person.class}`;
+
+
+
+inputTesterSurname.focus();
+inputTesterSurname.addEventListener('input', () => {
+  const valueLength = inputTesterSurname.value.length;
+  // console.log(`valueToArray(inputTesterSurname).length=${valueToArray(inputTesterSurname).length}`);
+  if (valueToArray(inputTesterSurname).length >= 1) {
+    inputTesterSurname.value = inputTesterSurname.value.trim();
+    // btnStartDisabled(false);
+    // document.querySelector('.js-btn-start').disabled = false;
+  } else {
+    btnStartDisabled(true);
+    // document.querySelector('.js-btn-start').disabled = true;
+    inputTesterSurname.setCustomValidity('Должно быть только 1-а фамилия');
+  }
+  inputTesterSurname.reportValidity();
+});
+
 inputTesterName.addEventListener('input', () => {
   const valueLength = inputTesterName.value.length;
-
-  if (valueToArray(inputTesterName).length >= 2 && valueToArray(inputTesterName)[1].length >= 2) {
+  // console.log(`valueToArray(inputTesterName).length=${valueToArray(inputTesterName).length}`);
+  if (valueToArray(inputTesterName).length >= 1) {
     inputTesterName.value = inputTesterName.value.trim();
+    // btnStartDisabled(false);
+    // document.querySelector('.js-btn-start').disabled = false;
+  } else {
+    // btnStartDisabled(true);
+    // document.querySelector('.js-btn-start').disabled = true;
+    inputTesterName.setCustomValidity('Должно быть только имя');
+  }
+  inputTesterName.reportValidity();
+});
+
+inputTesterClass.addEventListener('input', () => {
+  const valueLength = inputTesterClass.value.length;
+  // console.log(`valueToArray(inputTesterClass).length=${valueToArray(inputTesterClass).length}`);
+  if (inputTesterClass.value.length >= 2) {
+    inputTesterClass.value = inputTesterClass.value.trim();
     btnStartDisabled(false);
     // document.querySelector('.js-btn-start').disabled = false;
   } else {
     btnStartDisabled(true);
     // document.querySelector('.js-btn-start').disabled = true;
-    inputTesterName.setCustomValidity('Должно быть только фамилия и имя, 2 слова');
+    inputTesterClass.setCustomValidity('Укажите класс 1 или 2 цифры и букву класса');
   }
-
-  inputTesterName.reportValidity();
+  inputTesterClass.reportValidity();
 });
 
 
