@@ -1,9 +1,8 @@
 // import { points } from './data.js';
 import { getData, renderTextQuestion, shuffleArray, renderAnswerArray } from './utils.js';
 
-
 const template = /\d\w/;
-console.log(template.test("8Б"))
+// console.log(template.test("8Б"))
 
 const person = {
   surname:"Горемыка",
@@ -48,12 +47,12 @@ for (const allBtn of allBtns) {
 
 const startGame = () => {
   document.querySelector('.frame-init-game').classList.add('hidden');
-  if (document.querySelector('.tester-info').value =='') {
-    localStorage.userName = document.querySelector('.tester-info').placeholder
-  } else {
-    localStorage.userName = document.querySelector('.tester-info').value;
-  }
-
+  // if (document.querySelector('.tester-info').value =='') {
+  //   localStorage.userName = document.querySelector('.tester-info').placeholder
+  // } else {
+  //   localStorage.userName = document.querySelector('.tester-info').value;
+  // }
+  localStorage.user = `${inputTesterSurname.value} ${inputTesterName.value}  ${inputTesterClass.value}`
 
   getData((questionArray) => {
     randomLineQuests = shuffleArray(questionArray);
@@ -80,7 +79,7 @@ const btnStartDisabled = (state) => {
 };
 
 const valueToArray = function (item) {
-  console.log(`item.value.split(' ')=${item.value.split(' ')}`)
+  // console.log(`item.value.split(' ')=${item.value.split(' ')}`)
   return item.value.split(' ');
 };
 
@@ -108,13 +107,15 @@ inputTesterName.placeholder = `${person.name}`;
 inputTesterSurname.placeholder = `${person.surname}`;
 inputTesterClass.placeholder = `${person.class}`;
 
+
+
 inputTesterSurname.focus();
 inputTesterSurname.addEventListener('input', () => {
   const valueLength = inputTesterSurname.value.length;
   // console.log(`valueToArray(inputTesterSurname).length=${valueToArray(inputTesterSurname).length}`);
   if (valueToArray(inputTesterSurname).length >= 1) {
     inputTesterSurname.value = inputTesterSurname.value.trim();
-    btnStartDisabled(false);
+    // btnStartDisabled(false);
     // document.querySelector('.js-btn-start').disabled = false;
   } else {
     btnStartDisabled(true);
@@ -129,10 +130,10 @@ inputTesterName.addEventListener('input', () => {
   // console.log(`valueToArray(inputTesterName).length=${valueToArray(inputTesterName).length}`);
   if (valueToArray(inputTesterName).length >= 1) {
     inputTesterName.value = inputTesterName.value.trim();
-    btnStartDisabled(false);
+    // btnStartDisabled(false);
     // document.querySelector('.js-btn-start').disabled = false;
   } else {
-    btnStartDisabled(true);
+    // btnStartDisabled(true);
     // document.querySelector('.js-btn-start').disabled = true;
     inputTesterName.setCustomValidity('Должно быть только имя');
   }
@@ -142,7 +143,7 @@ inputTesterName.addEventListener('input', () => {
 inputTesterClass.addEventListener('input', () => {
   const valueLength = inputTesterClass.value.length;
   // console.log(`valueToArray(inputTesterClass).length=${valueToArray(inputTesterClass).length}`);
-  if (valueToArray(inputTesterClass).length >= 1) {
+  if (inputTesterClass.value.length >= 2) {
     inputTesterClass.value = inputTesterClass.value.trim();
     btnStartDisabled(false);
     // document.querySelector('.js-btn-start').disabled = false;

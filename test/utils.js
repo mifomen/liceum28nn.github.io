@@ -43,12 +43,7 @@ const shuffleArray = (basicArray) => {
   // return newArr;
 };
 
-////  установить значение для ключа
-//// localStorage.test = 2;
-//// // получить значение по ключу
-//// alert( localStorage.test ); // 2
-//// удалить ключ
-//// delete localStorage.test;
+
 
 let i = 1;
 const choosenAnswers = [];
@@ -91,12 +86,18 @@ const renderAnswerArray = (data, parent, item) => {
         showAnswers(data, choosenAnswers);
       }
     }
-
     div.appendChild(button);
   }
   parent.appendChild(div);
 
 };
+
+//  установить значение для ключа
+// localStorage.test = 2;
+//  получить значение по ключу
+// alert( localStorage.test ); // 2
+// удалить ключ
+// delete localStorage.test;
 
 const showLocal = () => {
   for (let key in localStorage) {
@@ -104,6 +105,7 @@ const showLocal = () => {
   }
 };
 
+// showLocal();
 const pointsResault = (numberItem) => {
  if (Math.round(numberItem*0.5) < numberItem) {
    return '2';
@@ -124,9 +126,7 @@ const pointsResault = (numberItem) => {
 //  Оценка 3 если > ${Math.round(choosenAnswers.length*0.5)} правильных ответов (50%)<br>
 //  Оценка 4 если > ${Math.round(choosenAnswers.length*0.75)} правильных ответов (75%)<br>
 //  Оценка 5 если > ${Math.round(choosenAnswers.length*0.9)} правильных ответов (90%)<br>
-
 }
-
 
 const getData = (onSuccess) => {
   fetch(DATA_GET_URL)
@@ -182,9 +182,10 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
   Оценка 4 если >= ${Math.round(choosenAnswers.length*0.75)} правильных ответов (75%)<br>
   Оценка 5 если > ${Math.round(choosenAnswers.length*0.9)} правильных ответов (90%)<br>
   `;
+  localStorage.user += ` ${pointsTesting} из ${choosenAnswers.length}`
+  console.log(`localStorage.user=${localStorage.user}`)
   div.appendChild(spanElement);
   document.body.appendChild(div);
 };
-
 
 export { getData, showLocal, findItem, clearQuestionArea, shuffleArray, renderTextQuestion, getRandomInt, renderAnswerArray };
