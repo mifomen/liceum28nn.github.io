@@ -36,10 +36,10 @@
   },
   {
     "id": 5,
-    "qustionText": "Выберите команду для раздела \"Модули\"",
+    "qustionText": "В переменной \"a\" хранится число 856. <br> Какими командами можно из \"a\" получить цифру 5?",
     "questionImg": "test2",
     "questionAudio": "name2",
-    "arrayAnswers": ["uses","crt","const","program crt;"]
+    "arrayAnswers": ["a mod 100 div 10","a div 100 mod 10","a div 10 mod 10"," a mod 100 div 100 "]
   },
   {
     "id": 6,
@@ -131,5 +131,33 @@
     "questionImg": "test2",
     "questionAudio": "name2",
     "arrayAnswers": ["string","char","boolean","real"]
+  },
+  {
+    "id": 18,
+    "qustionText": "В переменной \"a\" хранится число 856. <br> Какими командами можно из \"a\" получить цифру 6?",
+    "questionImg": "test2",
+    "questionAudio": "name2",
+    "arrayAnswers": ["a mod 10","a mod 11","a div 10"," a div 100 mod 10 "]
+  },
+  {
+    "id": 19,
+    "qustionText": "В переменной \"a\" хранится число 856. <br> Какими командами можно из \"a\" получить цифру 8?",
+    "questionImg": "test2",
+    "questionAudio": "name2",
+    "arrayAnswers": ["a div 100","a mod 100","a div 100 mod 10"," a mod 100 div 10 "]
+  },
+  {
+    "id": 20,
+    "qustionText": "В переменной \"a\" хранится число 856. <br> \"a\" вещественного типа.",
+    "questionImg": "test2",
+    "questionAudio": "name2",
+    "arrayAnswers": ["такое может быть","такого не может быть"]
+  },
+  {
+    "id": 21,
+    "qustionText": "В переменной \"a\" хранится число 856,2. <br> \"a\" целого типа.",
+    "questionImg": "test2",
+    "questionAudio": "name2",
+    "arrayAnswers": ["такого не может быть","такое может быть"]
   }
 ]
