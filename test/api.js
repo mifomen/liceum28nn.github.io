@@ -68,8 +68,8 @@ const startGame = () => {
 
 };
 
-document.querySelector('body').onselectstart = 'return false';
-document.querySelector('body').onmousedown = 'return false';
+// document.querySelector('body').onselectstart = 'return false';
+// document.querySelector('body').onmousedown = 'return false';
 
 const btnStartDisabled = (state) => {
   const btns = document.querySelectorAll('.js-btn-start');

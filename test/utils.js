@@ -154,17 +154,17 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
     if (choosenAnswers[i] === arrayRightAnswer[i].arrayAnswers[0]) {
       spanElement.classList.add('rightResaultAnswer');
       spanElement.innerHTML = `
-      В вопросе №${i + 1}: <u> ${arrayRightAnswer[i].qustionText}</u>
-      <span>Ваш ответ: <span class="red">правильный</span></span>
-      <span class="corrent-answer">${arrayRightAnswer[i].arrayAnswers[0]}</span>`;
+        В вопросе №${i + 1}: <u> ${arrayRightAnswer[i].qustionText}</u>
+        <span>Ваш ответ: <span class="red">правильный</span></span>
+        <span class="corrent-answer">${arrayRightAnswer[i].arrayAnswers[0]}</span>`;
       pointsTesting++
     } else {
       spanElement.classList.add('loseResaultAnswer');
       spanElement.innerHTML = `
-      В вопросе №${i + 1}: <u> ${arrayRightAnswer[i].qustionText} </u>
-      <span>Ваш ответ: <span class="red">неправильный</span></span>
-      <span class="not-corrent-answer">${arrayGetAnswer[i]}</span>
-      <span>Правильный ответ: ${arrayRightAnswer[i].arrayAnswers[0]}</span>`;
+        В вопросе №${i + 1}: <u> ${arrayRightAnswer[i].qustionText} </u>
+        <span>Ваш ответ: <span class="red">неправильный</span></span>
+        <span class="not-corrent-answer">${arrayGetAnswer[i]}</span>
+        <span>Правильный ответ: ${arrayRightAnswer[i].arrayAnswers[0]}</span>`;
     }
     div.appendChild(spanElement);
   }
@@ -180,7 +180,7 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
   spanElement.innerHTML=`${localStorage.user} получил:<br>${pointsTesting} баллов из ${choosenAnswers.length}<br>
   Оценка 3 если >= ${Math.floor(choosenAnswers.length*0.5)} правильных ответов (50%)<br>
   Оценка 4 если >= ${Math.round(choosenAnswers.length*0.75)} правильных ответов (75%)<br>
-  Оценка 5 если > ${Math.round(choosenAnswers.length*0.9)} правильных ответов (90%)<br>
+  Оценка 5 если >= ${Math.floor(choosenAnswers.length*0.92)} правильных ответов (90%)<br>
   `;
   localStorage.user += ` ${pointsTesting} из ${choosenAnswers.length}`
   console.log(`localStorage.user=${localStorage.user}`)

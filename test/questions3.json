@@ -8,7 +8,7 @@
   },
   {
     "id": 2,
-    "qustionText": "qustionText2qustionText2qustionText2qustionText 2qustionText ",
+    "qustionText": "qustionText 2qustionText2 qustionText2 qustionText 2qustionText ",
     "questionImg": "test2",
     "questionAudio": "name2",
     "arrayAnswers": ["test", "otvet2", "otver3", "otet4"]

@@ -88,7 +88,7 @@
     "qustionText": "После прочтения задачи учащиеся поняли, что нужно создать переменную a,b для целых чисел, d для хранения ответа с дробной частью <br> Выберите правильный ответ",
     "questionImg": "test2",
     "questionAudio": "name2",
-    "arrayAnswers": ["var d:real; <br> a,b:integer;","var d:rael; <br> a,b:integer;","var d:real; <br> a,b:longinteger;","var d:char; <br> a,b:integer;"]
+    "arrayAnswers": ["var d:real; <br> a,b:integer;","var d:rael; <br> a,b:integer;","var d:rial; <br> a,b:longinteger;","var d:char; <br> a,b:integer;"]
   },
   {
     "id": 13,
