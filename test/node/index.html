@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  <title>Document</title>
-</head>
-<body>
-  <h1>POstibng data from htm tot mongo db atals</h1>
-  <form class="contaier" method="post" action="/">
-    <div class="form-group">
-      <input type="text" class="form-control" name="title">
-    </div>
-    <div class="form-group">
-      <textarea name="content" class="form-control" name="" id="" cols="30" rows="10"></textarea>
-    </div>
-    <button>Add to mongo</button>
-  </form>
-
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://liceum28nn.github.io/cabinets/JetBrains.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href="roboto.css" rel="stylesheet"> -->
+    <title>Test</title>
+  </head>
+  <body class="page-body"">
+    <form class="frame-init-game">
+      <h1 class="vh">Тесты по информатике и не только</h1>
+      <label class="label__tester-info" for="tester-info">Введите свою фамилию и имя</label>
+      <input autocomplete="off" placeholder="js does not work" id="tester-info" type="text" class="tester-info js-tester-info__surname" maxlength="15">
+      <input autocomplete="off" placeholder="js does not work" id="tester-info" type="text" class="tester-info js-tester-info__name" maxlength="10">
+      <input autocomplete="off" placeholder="js does not work" id="tester-info" type="text" class="tester-info js-tester-info__class" maxlength="3">
+      <button disabled data-name-test="questions1.json" class="btn-start-test js-btn-start" type="button">Тест по pascal массивы 9 класс</button>
+      <button disabled data-name-test="questions2.json" class="btn-start-test js-btn-start" type="button">Тест по Pascal 8 класс</button>
+      <button disabled data-name-test="questions3.json" class="btn-start-test js-btn-start" type="button">Test</button>
+      <!-- <button disabled data-name-test="questions4.json" class="btn-start-test js-btn-start" type="button">Начать тест4</button> -->
+    </form>
+    <div class="frame-start-game js-init-game hidden"></div>
+    <script src="api.js" type="module"></script>
+  </body>
 </html>
