@@ -186,6 +186,19 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
   console.log(`localStorage.user=${localStorage.user}`)
   div.appendChild(spanElement);
   document.body.appendChild(div);
+
+  if ( i === arrayGetAnswer.length + 1) {
+    app.post("/", function(req, res) {
+      let newNote = new Note({
+        title: req.body.title,
+        content: req.body.content,
+        fio: req.body.fio,
+      });
+      newNote.save();
+      // res.redirect('/');
+    })
+
+  }
 };
 
 export { getData, showLocal, findItem, clearQuestionArea, shuffleArray, renderTextQuestion, getRandomInt, renderAnswerArray };

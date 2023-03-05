@@ -7,6 +7,7 @@
 *.psd
 *.sublime*
 node_modules/
+test/node_modules/
 npm-debug.*
 source/less/*.css
 source/less/*.map
