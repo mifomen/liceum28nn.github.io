@@ -1971,9 +1971,12 @@ var slideInterval = setInterval(nextSlide,Interval);
 
 // default time = 8500
 function nextSlide() {
-    slides[currentSlide].className = slides[currentSlide].className.replace(' no-showing','');
+    // slides[currentSlide].className = slides[currentSlide].className.replace(' no-showing','');
+    // currentSlide = (currentSlide+1)%slides.length;
+    // slides[currentSlide].className += ' no-showing';
+    slides[currentSlide].classList.remove('no-showing');
     currentSlide = (currentSlide+1)%slides.length;
-    slides[currentSlide].className += ' no-showing';
+    slides[currentSlide].classList.add('no-showing');
 }
 
 
