@@ -9,6 +9,7 @@
   <style>
 
 
+
 :root {
   --black: #000000;
   --grey: #808080;
@@ -32,6 +33,9 @@
   display: none;
 }
 
+.w100 {
+  width: 100%;
+}
 .page-body {
   margin: 0;
   padding: 10px;
@@ -199,6 +203,7 @@
   vertical-align: middle;
   text-align: center;
   font-size: 18px;
+  box-sizing: border-box;
   border: 1px solid #000000;
 }
 
@@ -336,6 +341,42 @@ td.ta-l {
 .cabinet-table__table-subtitle {
   font-size: 28px;
 }
+
+
+
+#slides {
+  /* font-size: 32px; */
+  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+.slide {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100%;
+}
+
+.slide-center {
+  align-items: center;
+  justify-content: center ;
+}
+
+
+.slide-style {
+  padding: 0;
+}
+
+.no-showing {
+  opacity: 0;
+  display: none;
+  padding: 0;
+}
+
 
   </style>
 </head>
@@ -554,7 +595,27 @@ td.ta-l {
         <td class="cabinet-table__cell cabinet-table__table--phis-ra">ЗАЛ</td>
         <td class="cabinet-table__cell">17</td>
         <td class="cabinet-table__cell">22</td>
-        <td class="cabinet-table__cell cabinet-table__table--special-lessons" colspan="9">↓ Спецкурсы ↓</td>
+        <td class="cabinet-table__cell-special-descriptions slide-style" id="slides" colspan="9" rowspan="6">
+          <span class="slide no-showing">
+            <span class="cabinet-table__table--special-lessons w100 ">↓ Спецкурсы ↓</span>
+            <span><strong>14:10 Баринова М.В. 20 каб.</strong> <br> Математика интенсив, 8е классы,</span>
+            <span><strong>14:10 Плаксина Т.Ю. 14 каб.</strong> <br> "За страницами учебника по биологии",</span>
+            <span><strong>14:10. Мацокина Г.Ф.  6 каб.</strong> <br> "Химия в эксперементах и расчетных задачах",</span>
+          </span>
+          <span class="slide slide-center">
+            <span><strong>2 смена, 06.03.2023 расстановка кабинетов:</strong>
+              <ol>
+                <li>7Б переходит в 15 каб.</li>
+                <li>6В переходит в  9каб.</li>
+                <li>6А переходит в 22 каб. 7Б в  10 каб.</li>
+                <li>6Г переходит в 22 каб., 7А в 15 каб</li>
+                <li>6Г переходит в 22 каб., 6В в 15 каб</li>
+                <li>6Б переходит в 22 каб., 7В в 15 каб</li>
+              </ol>
+            </span>
+          </span>
+        </td>
+        <!-- <td class="cabinet-table__cell cabinet-table__table--special-lessons" colspan="9">↓ Спецкурсы ↓</td> -->
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">2.</td>
@@ -565,11 +626,7 @@ td.ta-l {
         <td class="cabinet-table__cell cabinet-table__table--phis-ra">ЗАЛ</td>
         <td class="cabinet-table__cell cabinet-table__table--english">8/19</td>
         <td class="cabinet-table__cell">5</td>
-        <td class="cabinet-table__cell-special-descriptions" colspan="9" rowspan="5">
-          <strong>14:10 Баринова М.В. 20 каб.</strong> <br> Математика интенсив, 8е классы, <br>
-          <strong>14:10 Плаксина Т.Ю. 14 каб.</strong> <br> "За страницами учебника по биологии", <br>
-          <strong>14:10. Мацокина Г.Ф.  6 каб.</strong> <br> "Химия в эксперементах и расчетных задачах",<br>
-        </td>
+
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">3.</td>
@@ -1904,6 +1961,21 @@ td.ta-l {
 <script class="ms-informer-script" src="https://www.meteoservice.ru/informer/script/a58217a2b5c715a78207c988a1dee000"></script>
 -->
   <script>
+
+
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+
+let Interval = 8500; //time for change pictures
+var slideInterval = setInterval(nextSlide,Interval);
+
+// default time = 8500
+function nextSlide() {
+    slides[currentSlide].className = slides[currentSlide].className.replace(' no-showing','');
+    currentSlide = (currentSlide+1)%slides.length;
+    slides[currentSlide].className += ' no-showing';
+}
+
 
       const optionsTime = {
         // era: 'short', //long
