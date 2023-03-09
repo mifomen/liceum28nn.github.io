@@ -81,7 +81,7 @@
     "qustionText": "В переменную \"A\" создают случайное число из диапазона [-10,10] <br> Что надо написать в random() ?",
     "questionImg": "",
     "questionAudio": "",
-    "arrayAnswers": ["random(21)-5","random(21)-5","random(21)-5","random(21)-5"]
+    "arrayAnswers": ["random(21)-5","random(20)-6","random(20)-5","random(19)+6"]
   },
   {
     "id": 13,
@@ -95,7 +95,7 @@
     "qustionText": "В переменную \"A\" создают случайное число из диапазона [-50,-30] <br> Что надо написать в random() ?",
     "questionImg": "",
     "questionAudio": "",
-    "arrayAnswers": ["random(81)-50","random(80)-49","random(81)-51","random(81)-52"]
+    "arrayAnswers": ["random(21)-50","random(80)-49","random(21)-51","random(21)-52"]
   },
   {
     "id": 14,
