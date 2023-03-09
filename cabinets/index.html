@@ -604,13 +604,13 @@ td.ta-l {
         <td class="cabinet-table__cell">17</td>
         <td class="cabinet-table__cell">22</td>
         <td class="cabinet-table__cell-special-descriptions slide-style" id="slides" colspan="9" rowspan="6">
-          <span class="slide no-showing">
+          <!-- <span class="slide no-showing"> -->
             <span class="cabinet-table__table--special-lessons w100 ">↓ Спецкурсы ↓</span>
             <span><strong>14:10 Баринова М.В. 20 каб.</strong> <br> Математика интенсив, 8е классы,</span>
             <span><strong>14:10 Плаксина Т.Ю. 14 каб.</strong> <br> "За страницами учебника по биологии",</span>
             <span><strong>14:10. Мацокина Г.Ф.  6 каб.</strong> <br> "Химия в эксперементах и расчетных задачах",</span>
-          </span>
-          <span class="slide slide-center">
+          <!-- </span> -->
+          <!-- <span class="slide slide-center">
             <span><strong>2 смена, 06.03.2023 расстановка кабинетов:</strong>
               <ol>
                 <li>7Б переходит в 15 каб.</li>
@@ -621,7 +621,7 @@ td.ta-l {
                 <li>6Б переходит в 22 каб., 7В в 15 каб</li>
               </ol>
             </span>
-          </span>
+          </span> -->
         </td>
         <!-- <td class="cabinet-table__cell cabinet-table__table--special-lessons" colspan="9">↓ Спецкурсы ↓</td> -->
       </tr>
@@ -1969,21 +1969,21 @@ td.ta-l {
 <script>
 
 
-  var slides = document.querySelectorAll('#slides .slide');
-  var currentSlide = 0;
+  // var slides = document.querySelectorAll('#slides .slide');
+  // var currentSlide = 0;
 
-  let Interval = 8500; //time for change pictures
-  var slideInterval = setInterval(nextSlide,Interval);
+  // let Interval = 8500; //time for change pictures
+  // var slideInterval = setInterval(nextSlide,Interval);
 
-  // default time = 8500
-  function nextSlide() {
-      // slides[currentSlide].className = slides[currentSlide].className.replace(' no-showing','');
-      // currentSlide = (currentSlide+1)%slides.length;
-      // slides[currentSlide].className += ' no-showing';
-      slides[currentSlide].classList.remove('no-showing');
-      currentSlide = (currentSlide+1)%slides.length;
-      slides[currentSlide].classList.add('no-showing');
-  }
+  // // default time = 8500
+  // function nextSlide() {
+  //     // slides[currentSlide].className = slides[currentSlide].className.replace(' no-showing','');
+  //     // currentSlide = (currentSlide+1)%slides.length;
+  //     // slides[currentSlide].className += ' no-showing';
+  //     slides[currentSlide].classList.remove('no-showing');
+  //     currentSlide = (currentSlide+1)%slides.length;
+  //     slides[currentSlide].classList.add('no-showing');
+  // }
 
 
         const optionsTime = {
@@ -2055,16 +2055,16 @@ td.ta-l {
 
       // console.log(`document.querySelector('#day-6').checked=${document.querySelector('#day-6').checked}`)
 
-      const onScrollFixedLabelList = () => {
-        const labelList = document.querySelector('.label__list');
-        if (pageYOffset >= 35 ) {
-          labelList.classList.add('label__list--fixed');
-        }
+      // const onScrollFixedLabelList = () => {
+      //   const labelList = document.querySelector('.label__list');
+      //   if (pageYOffset >= 35 ) {
+      //     labelList.classList.add('label__list--fixed');
+      //   }
 
-        if (pageYOffset <= 35 ) {
-          labelList.classList.remove('label__list--fixed');
-        }
-      }
+      //   if (pageYOffset <= 35 ) {
+      //     labelList.classList.remove('label__list--fixed');
+      //   }
+      // }
 
       // const allCells = document.querySelectorAll('.cabinet-table__cell');
 
