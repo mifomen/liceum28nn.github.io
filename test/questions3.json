@@ -81,7 +81,7 @@
     "qustionText": "В переменную \"A\" создают случайное число из диапазона [-10,10] <br> Что надо написать в random() ?",
     "questionImg": "",
     "questionAudio": "",
-    "arrayAnswers": ["random(21)-5","random(21)-5","random(21)-5","random(21)-5"]
+    "arrayAnswers": ["random(21)-5","random(20)-6","random(20)-5","random(19)+6"]
   },
   {
     "id": 13,
