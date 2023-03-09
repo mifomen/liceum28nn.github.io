@@ -1,16 +1,107 @@
 [
   {
     "id": 1,
-    "qustionText": "Чтобы найти сколько записей удовлетворяют равенству надо использовать формулу?",
+    "qustionText": "В переменной \"A\" хранится число 12345. Как из него получить число 12 ?",
     "questionImg": "",
     "questionAudio": "",
-    "arrayAnswers": ["СЧЁТЕСЛИ","","",""]
+    "arrayAnswers": ["a div 1000","a mod 1000","a div 100","a mod 100"]
   },
   {
     "id": 2,
-    "qustionText": "qustionText 2qustionText2 qustionText2 qustionText 2qustionText ",
-    "questionImg": "test2",
-    "questionAudio": "name2",
-    "arrayAnswers": ["test", "otvet2", "otver3", "otet4"]
+    "qustionText": "В переменной \"A\" хранится число 12345. Как из него получить число 34 ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["a mod 1000 div 10","a div 1000 mod 10","a mod 100 div 100","a div 100 mod 100"]
+  },
+  {
+    "id": 3,
+    "qustionText": "В переменной \"A\" хранится число 12345. Как из него получить число 5 ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["a mod 10","a div 10","a mod 10000","a div 10000"]
+  },
+  {
+    "id": 4,
+    "qustionText": "В переменной \"A\" хранится число 12345. Как из него получить число 4 ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["a mod 100 div 10","a div 100 mod 10","a mod 10 div 100","a mod 10 div 100"]
+  },
+  {
+    "id": 5,
+    "qustionText": "В переменной \"A\" хранится число 12345. Как из него получить число 234 ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["a mod 10000 div 10","a div 10000 mod 10","a mod 1000 div 100","a div 1000 mod 100"]
+  },
+  {
+    "id": 6,
+    "qustionText": "В переменной \"A\" хранится число 12345. Как из него получить число 23 ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["a mod 10000 div 100"  ,"a div 10000 mod 100","a mod 1000 div 1000","a mod 1000 div 1000"]
+  },
+  {
+    "id": 7,
+    "qustionText": "В переменной \"A\" хранится число 12345. Как из него получить число 45 ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["a mod 100","a div 100","a div 1000","a mod 1000"]
+  },
+  {
+    "id": 8,
+    "qustionText": "В переменной \"A\" хранится число 12345. Как из него получить число 1 ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["a div 10000","a mod 10000","a div 1000","a mod 1000"]
+  },
+  {
+    "id": 9,
+    "qustionText": "В переменной \"A\" хранится число 12345. Как из него получить число 1234 ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["a div 10","a mod 10","a div 100","a mod 100"]
+  },
+  {
+    "id": 10,
+    "qustionText": "В переменной \"A\" хранится число 12345. Как из него получить число 345 ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["a mod 1000","a div 1000","a div 100","a mod 100"]
+  },
+  {
+    "id": 11,
+    "qustionText": "В переменную \"A\" создают случайное число из диапазона [-5,5] <br> Что надо написать в random() ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["random(11)-5","random(11)-6","random(12)-5","random(10)-5"]
+  },
+  {
+    "id": 12,
+    "qustionText": "В переменную \"A\" создают случайное число из диапазона [-10,10] <br> Что надо написать в random() ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["random(21)-5","random(21)-5","random(21)-5","random(21)-5"]
+  },
+  {
+    "id": 13,
+    "qustionText": "В переменную \"A\" создают случайное число из диапазона [-15,13] <br> Что надо написать в random() ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["random(19)-15","random(19)-16","random(20)-15","random(17)-18"]
+  },
+  {
+    "id": 14,
+    "qustionText": "В переменную \"A\" создают случайное число из диапазона [-50,-30] <br> Что надо написать в random() ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["random(81)-50","random(80)-49","random(81)-51","random(81)-52"]
+  },
+  {
+    "id": 14,
+    "qustionText": "В переменную \"A\" создают случайное число из диапазона [-35,178] <br> Что надо написать в random() ?",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["random(214)-35","random(213)-35","random(215)-36","random(214)-34"]
   }
 ]
