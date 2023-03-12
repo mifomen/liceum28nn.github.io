@@ -3,6 +3,7 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
+  font-variant-ligatures: normal;
   src: url("JetBrains/JetBrainsMono-Regular.woff2") format("woff2");
 }
 
@@ -12,6 +13,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
+  font-variant-ligatures: normal;
   src: url("JetBrains/JetBrainsMono-ExtraBold.woff2") format("woff2");
 }
 @font-face {
@@ -19,6 +21,7 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
+  font-variant-ligatures: normal;
   src: url("/JetBrains/JetBrainsMono-Bold.woff2") format("woff2");
 }
 /* greek-ext */
@@ -27,6 +30,7 @@
   font-style: italic;
   font-weight: 500;
   font-display: swap;
+  font-variant-ligatures: normal;
   src: url("JetBrains/JetBrainsMono-Bold-Italic.woff2") format("woff2");
 }
 
@@ -35,6 +39,7 @@
   font-style: italic;
   font-weight: 700;
   font-display: swap;
+  font-variant-ligatures: normal;
   src: url("JetBrains/JetBrainsMono-ExtraBold-Italic.woff2") format("woff2");
 }
 @font-face {
@@ -42,6 +47,7 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
+  font-variant-ligatures: normal;
   src: url("JetBrains/JetBrainsMono-Italic.woff2") format("woff2");
 }
 
@@ -50,6 +56,7 @@
   font-style: italic;
   font-weight: 600;
   font-display: swap;
+  font-variant-ligatures: normal;
   src: url("JetBrains/JetBrainsMono-Medium-Italic.woff2") format("woff2");
 }
 
@@ -58,5 +65,6 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
+  font-variant-ligatures: normal;
   src: url("JetBrains/JetBrainsMono-Medium.woff2") format("woff2");
 }
