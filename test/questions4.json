@@ -2,7 +2,7 @@
   {
     "id": 1,
     "qustionText": "Какие высказывания относятся к определению компьютера?",
-    "questionImg": "https://img3.fonwall.ru/o/rf/wallpaper-ocean-beach-rocks-horizon.jpeg",
+    "questionImg": "img/question4/img4.jpg",
     "questionAudio": "",
     "arrayAnswers": ["универсальное устройство", "устройство для работы с информацией", "сложное устройство","программно упраавляемое устройство"]
   },
