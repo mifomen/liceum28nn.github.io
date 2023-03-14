@@ -31,6 +31,18 @@ const renderTextQuestion = (parent, data) => {
   span.innerHTML = data.qustionText;
   span.onselectstart = 'return false';
   span.onmousedown = 'return false';
+
+  if (data.questionImg !== "" && data.questionImg !== undefined) {
+    const img = document.createElement('img');
+    img.className = 'question-img';
+    img.src=data.questionImg;
+    console.log(data.questionImg)
+    img.alt="data.questionImg"
+    span.appendChild(img);
+  }
+
+
+
   parent.appendChild(span);
 }
 
@@ -78,6 +90,7 @@ const renderAnswerArray = (data, parent, item) => {
       if (i < allProgressItems.length) {
         allProgressItems[i].classList.add('progress-bar__item--active');
         let obj = findItemByText(data, data[i].qustionText);
+        // console.log('obj= ',obj);
         renderTextQuestion(document.querySelector('.js-init-game'), obj);
         renderAnswerArray(data, document.querySelector('.js-init-game'), obj.arrayAnswers);
       }
