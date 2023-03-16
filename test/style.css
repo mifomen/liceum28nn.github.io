@@ -110,9 +110,9 @@
 
 .questions-columns {
   display: flex;
-flex-wrap: wrap;
-column-gap: 20px;
-box-sizing: border-box;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  box-sizing: border-box;
 }
 .questions-columns div {
   display: flex;
@@ -200,9 +200,10 @@ box-sizing: border-box;
 .question-img {
   /* width: 100%; */
   box-sizing: border-box;
-  height: 50%;
-  width: 70%;
-  border: 5px solid var(--basic-white);
+  /* height: 50%; */
+  width: 50%;
+  border: 15px double #fff;
+  margin: 25px;
 }
 
 .area-choose-answer {
