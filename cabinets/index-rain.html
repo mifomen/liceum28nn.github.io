@@ -1753,7 +1753,7 @@ td.ta-l {
         <td class="cabinet-table__cell fw900">0.</td>
         <td class="cabinet-table__cell cabinet-table__table--orange">16=>14</td>
         <td class="cabinet-table__cell cabinet-table__table--english">15/15</td>
-        <td class="cabinet-table__cell cabinet-table__table--orange">17=>8</td>
+        <td class="cabinet-table__cell">17</td>
         <td class="cabinet-table__cell">7</td>
         <td class="cabinet-table__cell">22</td>
         <td class="cabinet-table__cell">5</td>
@@ -1778,7 +1778,7 @@ td.ta-l {
         <td class="cabinet-table__cell fw900">1.</td>
         <td class="cabinet-table__cell cabinet-table__table--english">15/15</td>
         <td class="cabinet-table__cell cabinet-table__table--phis-ra">ЗАЛ</td>
-        <td class="cabinet-table__cell cabinet-table__table--orange">17=>21</td>
+        <td class="cabinet-table__cell">17</td>
         <td class="cabinet-table__cell cabinet-table__table--orange">16=>14</td>
         <td class="cabinet-table__cell cabinet-table__table--informatics">18|19</td>
         <td class="cabinet-table__cell">22</td>
@@ -1788,7 +1788,7 @@ td.ta-l {
         <td class="cabinet-table__cell fw900">2.</td>
         <td class="cabinet-table__cell">5</td>
         <td class="cabinet-table__cell cabinet-table__table--phis-ra">ЗАЛ</td>
-        <td class="cabinet-table__cell cabinet-table__table--orange">17=>21</td>
+        <td class="cabinet-table__cell">17</td>
         <td class="cabinet-table__cell cabinet-table__table--orange">16=>14</td>
         <td class="cabinet-table__cell">9</td>
         <td class="cabinet-table__cell">7</td>
@@ -1802,7 +1802,7 @@ td.ta-l {
         <td class="cabinet-table__cell">20</td>
         <td class="cabinet-table__cell">9</td>
         <td class="cabinet-table__cell cabinet-table__table--informatics">18|19</td>
-        <td class="cabinet-table__cell cabinet-table__table--orange">17=>21</td>
+        <td class="cabinet-table__cell">17</td>
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">4.</td>
@@ -1811,7 +1811,7 @@ td.ta-l {
         <td class="cabinet-table__cell">20</td>
         <td class="cabinet-table__cell">5</td>
         <td class="cabinet-table__cell">7</td>
-        <td class="cabinet-table__cell cabinet-table__table--orange">17=>15</td>
+        <td class="cabinet-table__cell">17</td>
         <td class="cabinet-table__cell">9</td>
       </tr>
       <tr class="cabinet-table__row">
@@ -1822,7 +1822,7 @@ td.ta-l {
         <td class="cabinet-table__cell">---</td>
         <td class="cabinet-table__cell">20</td>
         <td class="cabinet-table__cell">9</td>
-        <td class="cabinet-table__cell cabinet-table__table--orange">17=>15</td>
+        <td class="cabinet-table__cell">17</td>
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">6.</td>
@@ -1831,7 +1831,7 @@ td.ta-l {
         <td class="cabinet-table__cell">---</td>
         <td class="cabinet-table__cell">---</td>
         <td class="cabinet-table__cell">---</td>
-        <td class="cabinet-table__cell cabinet-table__table--orange">17=>15</td>
+        <td class="cabinet-table__cell">17</td>
         <td class="cabinet-table__cell">---</td>
       </tr>
     </table>
@@ -2149,7 +2149,8 @@ td.ta-l {
       const updateTime = setInterval( setTime, 1000 );
 
       // mifomen #2
-      const url = `#day-${new Date().getDay()+1}`;
+      const url = `#day-${new Date().getDay()}`;
+      // const url = `#day-${new Date().getDay()+1}`;
       // const url = '#day-5';
 
       if (document.querySelector(url)) {
