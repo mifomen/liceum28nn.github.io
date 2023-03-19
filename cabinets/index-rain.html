@@ -389,7 +389,7 @@ td.ta-l {
 
 
 .day-1 .cabinet-table .cabinet-table__cell {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .day-3 .cabinet-table .cabinet-table__cell,
@@ -401,23 +401,31 @@ td.ta-l {
 .img-content {
   background-color: #29bd5b;
   position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   right: 0;
   bottom: 0;
-  width: 7%;
+  width: 12%;
   border: 2px solid #1e1547;
   z-index: 5;
+  padding-left: 2px;
+  padding-right: 2px;
 }
 
 .img-title {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 13px;
+  display: table-cell;
+  /* display: flex; */
+  vertical-align: middle;
+  font-size: 12px;
   text-align: center;
   width: 100%;
   border: 2px solid #9fc5e8;
-  margin: 2px;
+  /* margin: 2px; */
+  /* width: 100%; */
   color: #fff;
+  /* box-sizing: padding-box; */
   text-shadow: 1px 1px 1px #000,1px -1px 1px #000,-1px 1px 1px #000,-1px -1px 1px #000;
 }
 
