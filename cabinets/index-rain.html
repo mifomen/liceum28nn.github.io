@@ -433,10 +433,19 @@ td.ta-l {
   width: 100%;
 }
 
+.img-content-full {
+  width: 45%;
+  transition: 500ms ease;
+}
+.img-content-full .img-title{
+  font-size: 24px;
+  transition: 500ms ease;
+}
+
   </style>
 </head>
 <body class="page-body">
-  <div class="img-content">
+  <div class="img-content js-qr-code-image">
     <span class="img-title">Ссылка на кабинеты</span>
     <img class="img-qr" src="qr-rain.png" alt="qr-code">
   </div>
@@ -2187,6 +2196,15 @@ td.ta-l {
       //   console.log(`${pageYOffset}`);
       // });
       // document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
+
+        const qrCode = document.querySelector('.js-qr-code-image');
+        qrCode.addEventListener('click', function(evt) {
+          evt.preventDefault();
+          // if (evt.target.classList.contains('img-content')) {
+            qrCode.classList.toggle('img-content-full')
+
+          // }
+        })
 
     </script>
 </body>
