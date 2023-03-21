@@ -208,6 +208,12 @@
     "questionImg": "",
     "questionAudio": "",
     "arrayAnswers": ["нет","да"]
+  },
+  {
+    "id": 31,
+    "qustionText": "Пищевая фольга это композитный материал. <br> Выберите Да/Нет",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["да","нет"]
   }
-
 ]
