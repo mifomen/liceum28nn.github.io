@@ -50,7 +50,7 @@
   },
   {
     "id": 8,
-    "qustionText": "Какого знака арифметического действия не существует в Excel",
+    "qustionText": "Какое значение будет в ячейке D5, если протянуть формулу из ячейки D1",
     "questionImg": "img/question5/008.jpg",
     "questionAudio": "",
     "arrayAnswers": ["154","98","242","174"]
