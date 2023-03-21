@@ -36,7 +36,7 @@ const renderTextQuestion = (parent, data) => {
     const img = document.createElement('img');
     img.className = 'question-img';
     img.src=data.questionImg;
-    console.log(data.questionImg)
+    // console.log(data.questionImg)
     img.alt="data.questionImg"
     span.appendChild(img);
   }
@@ -195,8 +195,11 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
   Оценка 4 если >= ${Math.round(choosenAnswers.length*0.75)} правильных ответов (75%)<br>
   Оценка 5 если >= ${Math.floor(choosenAnswers.length*0.92)} правильных ответов (90%)<br>
   `;
-  localStorage.user += ` ${pointsTesting} из ${choosenAnswers.length}`
-  console.log(`localStorage.user=${localStorage.user}`)
+
+  const uniqId = `User${parseInt(new Date().getTime() / 1000)}`;
+  localStorage.setItem(uniqId,`${uniqId} ${localStorage.user} ${pointsTesting} из ${choosenAnswers.length}`);
+  // console.log(`${parseInt(new Date().getTime() / 1000)}`)
+  // console.log(`localStorage.user=${localStorage.user}`)
   div.appendChild(spanElement);
   document.body.appendChild(div);
 };

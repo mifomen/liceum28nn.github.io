@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "qustionText": "Какое числовое значение получится в ячейке С1?",
+    "questionImg": "img/question5/010.jpg",
+    "questionAudio": "",
+    "arrayAnswers": ["41","36","49","47"]
+  }
+]
