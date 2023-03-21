@@ -8,7 +8,7 @@
   },
   {
     "id": 2,
-    "qustionText": "Какое щначение получится в ячейке F2",
+    "qustionText": "Какое значение получится в ячейке F2",
     "questionImg": "img/question5/002.jpg",
     "questionAudio": "",
     "arrayAnswers": ["72","14","48","54"]
