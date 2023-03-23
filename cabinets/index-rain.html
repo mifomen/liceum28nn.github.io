@@ -414,6 +414,12 @@ td.ta-l {
   padding-right: 2px;
 }
 
+.img-content--left-side {
+  left: 0;
+  right: auto;
+
+}
+
 .img-title {
   display: table-cell;
   /* display: flex; */
@@ -445,6 +451,10 @@ td.ta-l {
   </style>
 </head>
 <body class="page-body">
+  <div class="img-content img-content--left-side js-qr-code-image">
+    <span class="img-title">Официальная страница Лицея в социальных сетях</span>
+    <img class="img-qr" src="qr-code-vk-gos-public.png" alt="qr-code">
+  </div>
   <div class="img-content js-qr-code-image">
     <span class="img-title">Ссылка на кабинеты</span>
     <img class="img-qr" src="qr-rain.png" alt="qr-code">
@@ -2197,14 +2207,19 @@ td.ta-l {
       // });
       // document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
 
-        const qrCode = document.querySelector('.js-qr-code-image');
-        qrCode.addEventListener('click', function(evt) {
+      const allQrCode = document.querySelectorAll('.js-qr-code-image');
+
+      for (const qrCode of allQrCode) {
+      // const qrCode = document.querySelector('.js-qr-code-image');
+      qrCode.addEventListener('click', function(evt) {
           evt.preventDefault();
+          // console.log('click')
           // if (evt.target.classList.contains('img-content')) {
             qrCode.classList.toggle('img-content-full')
 
           // }
         })
+      }
 
     </script>
 </body>
