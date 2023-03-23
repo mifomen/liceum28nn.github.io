@@ -1,4 +1,4 @@
-import {DATA_GET_URL} from './api.js';
+import {DATA_GET_URL,inputTesterSurname} from './api.js';
 
 const findItem = function (items, resolve) {
   return items.find(item => item.id.toString() === resolve);
@@ -36,7 +36,7 @@ const renderTextQuestion = (parent, data) => {
     const img = document.createElement('img');
     img.className = 'question-img';
     img.src=data.questionImg;
-    console.log(data.questionImg)
+    // console.log(data.questionImg)
     // img.alt="data.questionImg"
     span.appendChild(img);
   }
@@ -119,26 +119,26 @@ const showLocal = () => {
 };
 
 // showLocal();
-const pointsResault = (numberItem) => {
- if (Math.round(numberItem*0.5) < numberItem) {
-   return '2';
- }
- if (Math.round(numberItem*0.5) > numberItem) {
-  numberItem
-   return '3';
- }
- if (Math.round(numberItem*0.75) > numberItem) {
-  numberItem
-   return '4';
- }
- if (Math.round(numberItem*0.9) > numberItem) {
-  numberItem
+const pointsResault = (numberItem,rightAnswerLength) => {
+//  if (Math.round(numberItem*0.52) < numberItem) {
+//    return '2';
+//  }
+if (numberItem >= Math.round(rightAnswerLength*0.92) ) {
+  // console.log(`${Math.round(rightAnswerLength*0.92)} >= ${numberItem}`)
    return '5';
  }
-//  Оценка 2 если < ${)} правильных ответов (50%)<br>
-//  Оценка 3 если > ${Math.round(choosenAnswers.length*0.5)} правильных ответов (50%)<br>
-//  Оценка 4 если > ${Math.round(choosenAnswers.length*0.75)} правильных ответов (75%)<br>
-//  Оценка 5 если > ${Math.round(choosenAnswers.length*0.9)} правильных ответов (90%)<br>
+ if (numberItem >= Math.floor(rightAnswerLength*0.75)  ) {
+
+   return '4';
+ }
+ if (numberItem >= Math.floor(rightAnswerLength*0.5) ) {
+
+   return '3';
+ }
+ return '2';
+//  Оценка 3 если >= ${Math.floor(choosenAnswers.length*0.5)} правильных ответов (50%)<br>
+// Оценка 4 если >= ${Math.round(choosenAnswers.length*0.75)} правильных ответов (75%)<br>
+// Оценка 5 если >= ${Math.floor(choosenAnswers.length*0.92)} правильных ответов (90%)<br>
 }
 
 const getData = (onSuccess) => {
@@ -190,16 +190,31 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
   spanElement.classList.add('resaultAnswerFinal');
   spanElement.onselectstart = 'return false';
   spanElement.onmousedown = 'return false';
-  spanElement.innerHTML=`${localStorage.user} получил:<br>${pointsTesting} баллов из ${choosenAnswers.length}<br>
+  spanElement.innerHTML=`${localStorage.user} овтетил:<br>${pointsTesting} правильных ответ(а) из ${choosenAnswers.length}<br>
+  Ваша оценка ${pointsResault(pointsTesting,choosenAnswers.length)} <br>
   Оценка 3 если >= ${Math.floor(choosenAnswers.length*0.5)} правильных ответов (50%)<br>
   Оценка 4 если >= ${Math.round(choosenAnswers.length*0.75)} правильных ответов (75%)<br>
   Оценка 5 если >= ${Math.floor(choosenAnswers.length*0.92)} правильных ответов (90%)<br>
   `;
 
-  const uniqId = `User${parseInt(new Date().getTime() / 1000)}`;
-  localStorage.setItem(uniqId,`${uniqId} ${localStorage.user} ${pointsTesting} из ${choosenAnswers.length}`);
+  const   optionsTime  = {
+    // era: 'short', //long
+    // year: 'numeric',
+    // month: 'long',
+    // day: 'numeric',
+    // weekday: 'long',
+    // timezone: 'UTC',
+    hour: 'numeric',
+    minute: 'numeric',
+    second: 'numeric'
+  };
+
+  const uniqId = `${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString('ru',optionsTime)}`;
+  // console.log('uniqId',uniqId)
+  localStorage.setItem(uniqId,`${inputTesterSurname.value} ${uniqId} ${localStorage.user} ${pointsTesting} из ${choosenAnswers.length}`);
   // console.log(`${parseInt(new Date().getTime() / 1000)}`)
-  // console.log(`localStorage.user=${localStorage.user}`)
+  console.log(localStorage)
+  // alert(localStorage)
   div.appendChild(spanElement);
   document.body.appendChild(div);
 };
