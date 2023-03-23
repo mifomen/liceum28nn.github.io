@@ -98,7 +98,7 @@ const checkEveryName = (item) => {
 };
 
 const inputTesterName = document.querySelector('.js-tester-info__name');
-const inputTesterSurname = document.querySelector('.js-tester-info__surname');
+export const inputTesterSurname = document.querySelector('.js-tester-info__surname');
 const inputTesterClass = document.querySelector('.js-tester-info__class');
 
 // inputTesterName.value = `${name}`;
