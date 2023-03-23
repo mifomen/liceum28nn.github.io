@@ -36,6 +36,8 @@ const renderTextQuestion = (parent, data) => {
     const img = document.createElement('img');
     img.className = 'question-img';
     img.src=data.questionImg;
+
+    span.classList.add('question-text-with-img');
     // console.log(data.questionImg)
     // img.alt="data.questionImg"
     span.appendChild(img);
