@@ -1,7 +1,7 @@
 import {DATA_GET_URL,inputTesterSurname} from './api.js';
 
-const findItem = function (items, resolve) {
-  return items.find(item => item.id.toString() === resolve);
+const findItemById = function (items, resolve) {
+  return items.find(item => item.id === resolve);
 };
 
 const findItemByText = function (items, resolve) {
@@ -36,13 +36,12 @@ const renderTextQuestion = (parent, data) => {
     const img = document.createElement('img');
     img.className = 'question-img';
     img.src=data.questionImg;
+
+    span.classList.add('question-text-with-img');
     // console.log(data.questionImg)
     // img.alt="data.questionImg"
     span.appendChild(img);
   }
-
-
-
   parent.appendChild(span);
 }
 
@@ -89,7 +88,7 @@ const renderAnswerArray = (data, parent, item) => {
       // allProgressItems[i].classList.add('progress-bar__item--active');
       if (i < allProgressItems.length) {
         allProgressItems[i].classList.add('progress-bar__item--active');
-        let obj = findItemByText(data, data[i].qustionText);
+        let obj = findItemById(data, data[i].id);
         // console.log('obj= ',obj);
         renderTextQuestion(document.querySelector('.js-init-game'), obj);
         renderAnswerArray(data, document.querySelector('.js-init-game'), obj.arrayAnswers);
@@ -219,4 +218,4 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
   document.body.appendChild(div);
 };
 
-export { getData, showLocal, findItem, clearQuestionArea, shuffleArray, renderTextQuestion, getRandomInt, renderAnswerArray };
+export { getData, showLocal, clearQuestionArea, shuffleArray, renderTextQuestion, getRandomInt, renderAnswerArray };
