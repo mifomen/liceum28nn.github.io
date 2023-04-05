@@ -27,6 +27,10 @@
   font-variant-ligatures: normal;
   /* "Central-Regular", arial; */
   /* ,"Roboto","Times new roman", sans-serif; */
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
 }
 
 .vh,
@@ -2226,6 +2230,9 @@ td.ta-l {
       }
 
       let timerId = setInterval(() => reloadPage(), timer);
+
+
+      document.addEventListener('contextmenu', evt => evt.preventDefault());
 
       const allCells = document.querySelectorAll('.cabinet-table__cell');
       for (const cell of allCells) {
