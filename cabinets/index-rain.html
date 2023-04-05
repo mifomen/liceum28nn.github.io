@@ -2226,6 +2226,19 @@ td.ta-l {
       }
 
       let timerId = setInterval(() => reloadPage(), timer);
+
+      const allCells = document.querySelectorAll('.cabinet-table__cell');
+      for (const cell of allCells) {
+        if (cell.textContent.indexOf('/') >=0) {
+          cell.classList.add('cabinet-table__table--english')
+        }
+        if (cell.textContent.indexOf('|') >=0) {
+          cell.classList.add('cabinet-table__table--informatics')
+        }
+        if (cell.textContent.toUpperCase().indexOf('ЗАЛ') >=0) {
+          cell.classList.add('cabinet-table__table--phis-ra')
+        }
+      }
     </script>
 </body>
 </html>
