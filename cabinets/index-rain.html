@@ -161,12 +161,13 @@
   padding: 5px 9px;
   vertical-align: middle;
   text-align: center;
-  /* font-weight: 700; */
+  /* font-weight: 400; */
   /* min-width: 20px; */
   font-size: 18px;
 }
 
-
+.cabinet-table__row:nth-child(2),
+.cabinet-table__row:nth-child(11),
 .fw900 {
  font-weight: 900;
 }
@@ -495,7 +496,7 @@ td.ta-l {
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell cabinet-table__table-subtitle fw900" colspan="17">1-ая смена</td>
       </tr>
-      <tr class="cabinet-table__row fw900">
+      <tr class="cabinet-table__row">
         <td class="cabinet-table__cell">№</td>
         <td class="cabinet-table__cell">5А</td>
         <td class="cabinet-table__cell">5Б</td>
@@ -704,7 +705,7 @@ td.ta-l {
         <td class="cabinet-table__cell fw900 cabinet-table__table-subtitle" colspan="7">2-ая смена</td>
         <td class="cabinet-table__table cabinet-table__table--hidden"></td>
       </tr>
-      <tr class="cabinet-table__row fw900">
+      <tr class="cabinet-table__row">
         <td class="cabinet-table__cell">№</td>
         <td class="cabinet-table__cell">6А</td>
         <td class="cabinet-table__cell">6Б</td>
@@ -818,7 +819,7 @@ td.ta-l {
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell cabinet-table__table-subtitle fw900" colspan="17">1-ая смена</td>
       </tr>
-      <tr class="cabinet-table__row fw900">
+      <tr class="cabinet-table__row">
         <td class="cabinet-table__cell">№</td>
         <td class="cabinet-table__cell">5А</td>
         <td class="cabinet-table__cell">5Б</td>
@@ -1073,7 +1074,7 @@ td.ta-l {
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell cabinet-table__table-subtitle fw900" colspan="17">1-ая смена</td>
       </tr>
-      <tr class="cabinet-table__row fw900">
+      <tr class="cabinet-table__row">
         <td class="cabinet-table__cell">№</td>
         <td class="cabinet-table__cell">5А</td>
         <td class="cabinet-table__cell">5Б</td>
@@ -1110,7 +1111,6 @@ td.ta-l {
         <td class="cabinet-table__cell">---</td>
         <td class="cabinet-table__cell">22</td>
         <td class="cabinet-table__cell">10</td>
-
       </tr>
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell fw900">2.</td>
@@ -1229,7 +1229,7 @@ td.ta-l {
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell cabinet-table__table-subtitle fw900" colspan="17">2-ая смена</td>
       </tr>
-      <tr class="cabinet-table__row fw900">
+      <tr class="cabinet-table__row">
         <td class="cabinet-table__cell">№</td>
         <td class="cabinet-table__cell">6А</td>
         <td class="cabinet-table__cell">6Б</td>
@@ -1331,7 +1331,7 @@ td.ta-l {
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell cabinet-table__table-subtitle fw900" colspan="17">1-ая смена</td>
       </tr>
-      <tr class="cabinet-table__row fw900">
+      <tr class="cabinet-table__row">
         <td class="cabinet-table__cell">№</td>
         <td class="cabinet-table__cell">5А</td>
         <td class="cabinet-table__cell">5Б</td>
@@ -1486,7 +1486,7 @@ td.ta-l {
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell cabinet-table__table-subtitle fw900" colspan="17">2-ая смена</td>
       </tr>
-      <tr class="cabinet-table__row fw900">
+      <tr class="cabinet-table__row">
         <td class="cabinet-table__cell">№</td>
         <td class="cabinet-table__cell">6А</td>
         <td class="cabinet-table__cell">6Б</td>
@@ -1585,7 +1585,7 @@ td.ta-l {
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell cabinet-table__table-subtitle fw900" colspan="17">1-ая смена</td>
       </tr>
-      <tr class="cabinet-table__row fw900">
+      <tr class="cabinet-table__row">
         <td class="cabinet-table__cell">№</td>
         <td class="cabinet-table__cell">5А</td>
         <td class="cabinet-table__cell">5Б</td>
@@ -1740,7 +1740,7 @@ td.ta-l {
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell cabinet-table__table-subtitle fw900" colspan="17">2-ая смена</td>
       </tr>
-      <tr class="cabinet-table__row fw900">
+      <tr class="cabinet-table__row">
         <td class="cabinet-table__cell">№</td>
         <td class="cabinet-table__cell">6А</td>
         <td class="cabinet-table__cell">6Б</td>
@@ -1844,7 +1844,7 @@ td.ta-l {
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell cabinet-table__table-subtitle fw900" colspan="17">1-ая смена</td>
       </tr>
-      <tr class="cabinet-table__row fw900">
+      <tr class="cabinet-table__row">
         <td class="cabinet-table__cell">№</td>
         <td class="cabinet-table__cell">5А</td>
         <td class="cabinet-table__cell">5Б</td>
@@ -1983,7 +1983,7 @@ td.ta-l {
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell cabinet-table__table-subtitle fw900" colspan="17">2-ая смена</td>
       </tr>
-      <tr class="cabinet-table__row fw900">
+      <tr class="cabinet-table__row">
         <td class="cabinet-table__cell">№</td>
         <td class="cabinet-table__cell">6А</td>
         <td class="cabinet-table__cell">6Б</td>
@@ -2257,6 +2257,23 @@ td.ta-l {
         if (cell.textContent.toUpperCase().indexOf('ЗАЛ') >=0) {
           cell.textContent='ЗАЛ';
         }
+      }
+
+      console.log(url)
+
+      const rules = document.querySelectorAll(`.day-4 .cabinet-table .cabinet-table__row`);
+
+      let set = new Set();
+
+      for (const rule of rules) {
+        // if (!rule.classList.contains('fw900')) {
+        // }
+        console.log(rule)
+
+        // for (const part of rule) {
+          // set.add(part);
+        // }
+        // console.log(`set.size = ${set.size} rule.length=${rule.length}`)
       }
     </script>
 </body>
