@@ -1585,7 +1585,7 @@ td.ta-l {
       <tr class="cabinet-table__row">
         <td class="cabinet-table__cell cabinet-table__table-subtitle fw900" colspan="17">1-ая смена</td>
       </tr>
-      <tr class="cabinet-table__row">
+      <tr class="cabinet-table__row fw900">
         <td class="cabinet-table__cell">№</td>
         <td class="cabinet-table__cell">5А</td>
         <td class="cabinet-table__cell">5Б</td>
@@ -1614,7 +1614,7 @@ td.ta-l {
         <td class="cabinet-table__cell">8</td>
         <td class="cabinet-table__cell">6</td>
         <td class="cabinet-table__cell">15</td>
-        <td class="cabinet-table__cell">---</td>
+        <td class="cabinet-table__cell">13</td>
         <td class="cabinet-table__cell">9</td>
         <td class="cabinet-table__cell">22</td>
         <td class="cabinet-table__cell">17</td>
@@ -2271,11 +2271,67 @@ td.ta-l {
         }
       }
 
-      const rules = document.querySelectorAll(`.${url.substring(1)} .cabinet-table__row`);
+
 
       let set = new Set();
-      for (const rule of rules) {
-        console.log(rule)
+      const allCabinetsSet = new Set();
+
+      const masCabinets = ['3','4','5','6','7','8','9','10','12','14','15','16','17','18','19','20','21','22','ЗАЛ'];
+
+      for ( const item of masCabinets) {
+        allCabinetsSet.add(item);
+      }
+
+      // console.log('allCabinetsSet = ',allCabinetsSet)
+
+      const hasFreeCabinet = (freeCab) => {
+        return allCabinetsSet.has(freeCab)
+      }
+
+      // mifomen #3
+      const cabinetTableRows = document.querySelectorAll(`.${url.substring(1)} .cabinet-table__row`);
+
+      for (const cabinetTableRow of cabinetTableRows) {
+        console.log(cabinetTableRow)
+
+        const cabinetTableCells = cabinetTableRow.querySelectorAll('.cabinet-table__cell');
+
+        for ( const cabinetTableCell of cabinetTableCells) {
+          // console.log(cabinetTableCell.textContent.indexOf('.') < 0);
+
+          if (!cabinetTableCell.classList.contains('fw900') || cabinetTableCell.textContent === '---' || cabinetTableCell.textContent.indexOf('.') < 0 ) {
+            // console.log('cabinetTableCell.textContent = ',cabinetTableCell.textContent)
+              set.add(cabinetTableCell.textContent)
+          }
+
+          if (set.has('---')) {
+            set.delete('---')
+          }
+        }
+        console.log('set= ',set)
+
+        let arrayFreeCabinets = [];
+        // set.forEach( (item)=> {
+        //   if (!hasFreeCabinet(item)) {
+        //     arrayFreeCabinets.push(item);
+        //   }
+        // })
+
+        allCabinetsSet.forEach((item) => {
+          if (!set.has(item)) {
+            arrayFreeCabinets.push(item);
+          }
+        });
+
+        console.log('arrayFreeCabinets= ',arrayFreeCabinets)
+
+        const td = document.createElement('td');
+        td.textContent=arrayFreeCabinets;
+        td.classList.add('cabinet-table__cell')
+        cabinetTableRow.appendChild(td);
+        set.clear();
+        arrayFreeCabinets = [];
+
       }
     </script>
 </body>
