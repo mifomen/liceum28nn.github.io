@@ -2123,24 +2123,11 @@ td.ta-l {
         }
       }
 
-      const allSelectBtn = document.querySelectorAll('.day__button');
-
-      for ( const btn of allSelectBtn) {
-        btn.addEventListener('click', changePositionTimer)
+      const selectBtns = document.querySelectorAll('.day__button');
+      for ( const selectBtn of selectBtns) {
+        selectBtn.addEventListener('click', changePositionTimer)
       };
 
-      // changePositionTimer(document.querySelector(url.substring(1)));
-      // console.log(document.querySelector(url.substring(1)));
-
-      // console.log(`document.querySelector('#day-6').checked=${document.querySelector('#day-6').checked}`)
-      // if (document.querySelector('#day-6').checked ==true) {
-      //   console.log('true');
-      //   // if (document.querySelector('.js-now-time')) {
-      //     document.querySelector('.js-now-time').classList.add('now-time--saturday')
-      //   // }
-      // }
-
-      // console.log(`document.querySelector('#day-6').checked=${document.querySelector('#day-6').checked}`)
 
       // const onScrollFixedLabelList = () => {
       //   const labelList = document.querySelector('.label__list');
@@ -2153,37 +2140,18 @@ td.ta-l {
       //   }
       // }
 
-      // const allCells = document.querySelectorAll('.cabinet-table__cell');
-
-      // for ( let i=0; i<allCells.length; i++) {
-      //   if (allCells[i].textContent.indexOf("/") > -1 ) {
-      //     allCells[i].classList.add('cabinet-table__table--english');
-      //   }
-      //   if (allCells[i].textContent.indexOf("|") > -1 ) {
-      //     allCells[i].classList.add('cabinet-table__table--informatics');
-      //   }
-      //   if (allCells[i].textContent.toLowerCase().indexOf("зал") > -1 ) {
-      //     allCells[i].classList.add('cabinet-table__table--phis-ra');
-      //   }
-      // }
-
       // window.addEventListener('scroll',onScrollFixedLabelList);
-
       // window.addEventListener('scroll', function() {
       //   console.log(`${pageYOffset}`);
       // });
       // document.getElementById('showScroll').innerHTML = pageYOffset + 'px';
 
-      const allQrCode = document.querySelectorAll('.js-qr-code-image');
+      const qrCodeImages = document.querySelectorAll('.js-qr-code-image');
 
-      for (const qrCode of allQrCode) {
-      // const qrCode = document.querySelector('.js-qr-code-image');
-      qrCode.addEventListener('click', function(evt) {
+      for (const qrCodeImageElement of qrCodeImages) {
+      qrCodeImageElement.addEventListener('click', function(evt) {
           evt.preventDefault();
-          // console.log('click')
-          // if (evt.target.classList.contains('img-content')) {
-            qrCode.classList.toggle('img-content-full')
-          // }
+            qrCodeImageElement.classList.toggle('img-content-full')
         })
       }
 
@@ -2197,8 +2165,6 @@ td.ta-l {
       }
 
       let timerId = setInterval(() => reloadPage(), RELOAD_TIME);
-
-
       document.addEventListener('contextmenu', evt => evt.preventDefault());
 
       const allCells = document.querySelectorAll('.cabinet-table__cell');
@@ -2212,12 +2178,10 @@ td.ta-l {
         if (cell.textContent.toUpperCase().indexOf('ЗАЛ') >=0) {
           cell.classList.add('cabinet-table__table--phis-ra')
         }
-
         if (cell.textContent.toUpperCase().indexOf('ЗАЛ') >=0) {
           cell.textContent='ЗАЛ';
         }
       }
-
 
       const renderFreeCabients = () => {
       let set = new Set();
