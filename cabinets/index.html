@@ -2116,15 +2116,11 @@ td.ta-l {
         }
       }
 
-      if (url.substring(1) === 'day-5' || url.substring(1) === 'day-6') {
-        document.querySelector('.js-now-time').classList.add('now-time--saturday')
-      }
-
       if (document.querySelector(url)) {
         document.querySelector(url).checked = true;
-        if (url.substring(1) === 'day-5') {
-        document.querySelector('.js-now-time').classList.add('now-time--saturday')
-      }
+        if (url.substring(1) === 'day-5' || url.substring(1) === 'day-6') {
+          document.querySelector('.js-now-time').classList.add('now-time--saturday')
+        }
       }
 
       const allSelectBtn = document.querySelectorAll('.day__button');
