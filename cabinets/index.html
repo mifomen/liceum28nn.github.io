@@ -469,19 +469,22 @@ td.ta-l {
 
 
 @media (max-width: 768px) {
- /* mifomen123 */
+ /* mifomen123 mifoman */
  .js-qr-code-image {
   display: none;
  }
 
- .cabinet-table__cell-special-descriptions,
- .cabinet-table__table--special-lessons,
- .day__button-label,
- .now-time,
- .cabinet-table__cell {
-  font-size: 12px;
-  padding: 4px;
- }
+  .cabinet-table__table-cell:nth-child(1),
+  .cabinet-table td:nth-child(1),
+  .cabinet-table__cell-special-descriptions,
+  .cabinet-table__table--special-lessons,
+  .day__button-label,
+  .now-time,
+  .cabinet-table__cell {
+    font-size: 12px;
+    padding: 4px;
+    min-width: auto;
+  }
 }
 
 
