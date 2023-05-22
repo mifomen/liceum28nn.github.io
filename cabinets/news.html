@@ -221,8 +221,7 @@
 }
 
 .day__button-2:checked .button-label__2
-.day__button-1:checked .button-label__1,
-.day__button-7:checked .button-label__7 {
+.day__button-1:checked .button-label__1 {
   background-color: #808080;
   border-color: #ffffff;
   outline-color: #ffffff;
@@ -245,8 +244,7 @@
 .day__button-3:checked ~ .day-3,
 .day__button-4:checked ~ .day-4,
 .day__button-5:checked ~ .day-5,
-.day__button-6:checked ~ .day-6,
-.day__button-7:checked ~ .day-7 {
+.day__button-6:checked ~ .day-6 {
   display: block;
 }
 
@@ -257,8 +255,7 @@
 .day__button-3:checked ~ .label__list .button-label__3,
 .day__button-4:checked ~ .label__list .button-label__4,
 .day__button-5:checked ~ .label__list .button-label__5,
-.day__button-6:checked ~ .label__list .button-label__6,
-.day__button-7:checked ~ .label__list .button-label__7  {
+.day__button-6:checked ~ .label__list .button-label__6  {
   background-color: #65d261;
   letter-spacing: 4px;
   border: 10px double #29bd5b;
@@ -511,10 +508,8 @@ td.ta-l {
   <input class="day__button day__button-4" type="radio" name="days" id="day-4">
   <input class="day__button day__button-5" type="radio" name="days" id="day-5">
   <input class="day__button day__button-6" type="radio" name="days" id="day-6">
-  <input class="day__button day__button-7" type="radio" name="days" id="day-7">
 
   <ul class="label__list">
-    <label class="day__button-label button-label__7" for="day-7">новости</label>
     <label class="day__button-label button-label__1" for="day-1">понедельник</label>
     <label class="day__button-label button-label__2" for="day-2">вторник</label>
     <label class="day__button-label button-label__3" for="day-3">среда</label>
@@ -2059,83 +2054,8 @@ td.ta-l {
     </table>
   </div>
 
-  <div class="day day-7">
-    <h1 class="vh">новости</h1>
-    <table class="cabinet-table">
-      <tr class="cabinet-table__row">
-        <td class="cabinet-table__cell cabinet-table__table-subtitle fw900" colspan="18">Распределение кабинетов на 23.05.2023,<br> для проведения классного часа.</td>
-      </tr>
-      <tr class="cabinet-table__row">
-        <td class="cabinet-table__cell">№</td>
-        <td class="cabinet-table__cell">5А</td>
-        <td class="cabinet-table__cell">5Б</td>
-        <td class="cabinet-table__cell">5В</td>
-        <td class="cabinet-table__cell">5Г</td>
-        <td class="cabinet-table__cell">6А</td>
-        <td class="cabinet-table__cell">6Б</td>
-        <td class="cabinet-table__cell">6В</td>
-        <td class="cabinet-table__cell">7А</td>
-        <td class="cabinet-table__cell">7Б</td>
-        <td class="cabinet-table__cell">7В</td>
-        <td class="cabinet-table__cell">6г</td>
-        <td class="cabinet-table__cell">8А</td>
-        <td class="cabinet-table__cell">8Б</td>
-        <td class="cabinet-table__cell">8В</td>
-        <td class="cabinet-table__cell">10А</td>
-        <td class="cabinet-table__cell">10Б</td>
-        <td class="cabinet-table__cell">10В</td>
-      </tr>
-       <!-- <td colspan="1" rowspan="1" class="cabinet-table__cell AniBorderBlue vh">
-        <span class="vh"></span>
-       </td> -->
-      <tr class="cabinet-table__row">
-        <td class="cabinet-table__cell fw900">1.</td>
-
-        <td class="cabinet-table__cell">7 к 8.20</td>
-        <td class="cabinet-table__cell">3</td>
-        <td class="cabinet-table__cell">16</td>
-        <td class="cabinet-table__cell">дист</td>
-        <td class="cabinet-table__cell">4 к 10.00</td>
-        <td class="cabinet-table__cell">15</td>
-        <td class="cabinet-table__cell">9</td>
-        <td class="cabinet-table__cell">5</td>
-        <td class="cabinet-table__cell">6</td>
-        <td class="cabinet-table__cell">12</td>
-        <td class="cabinet-table__cell">14</td>
-        <td class="cabinet-table__cell">8</td>
-        <td class="cabinet-table__cell">17</td>
-        <td class="cabinet-table__cell">20</td>
-        <td class="cabinet-table__cell">22</td>
-        <td class="cabinet-table__cell">4</td>
-        <td class="cabinet-table__cell">10</td>
-      </tr>
-      <tr class="cabinet-table__row">
-        <td colspan=18 row-span=5 class="cabinet-table__cell fw900">Графики проведения ГИА</td>
-      </tr>
-      <tr class="cabinet-table__row">
-        <td class="cabinet-table__cell" colspan=18 row-span=5>
-          <div class="fz24 jtmf lh13 ta-c AniBorderBlue blue-ts m25 p25 br-20 v">
-            <a target="_blank" href="https://obrnadzor.gov.ru/wp-content/uploads/2022/12/raspisanie-ege-i-gve-11.pdf" class="blue-ts  fz32 " style="color: #34a5ef" rel="noopener">График проведения ЕГЭ (ГИА-11) в 2023 году</a>
-          </div>
-        </td>
-      </tr>
-
-      <tr class="cabinet-table__row">
-        <td class="cabinet-table__cell" colspan=18 row-span=5>
-          <div class="fz24 jtmf lh13 ta-c AniBorderBlue blue-ts m25 p25 br-20 v">
-            <a target="_blank" href="https://obrnadzor.gov.ru/wp-content/uploads/2022/12/raspisanie-oge-i-gve-9.pdf" class="blue-ts  fz32 " style="color: #34a5ef" rel="noopener">График проведения ОГЭ (ГИА-9) в 2023 году</a>
-          </div>
-        </td>
-      </tr>
-
-
-    </table>
-  </div>
-
   <ul class="list">
-    <li class="list__item item__7 list__item--active">новости
-  </li>
-    <li class="list__item item__1">понедельник
+    <li class="list__item item__1 list__item--active">понедельник
     </li>
     <li class="list__item item__2 ">вторник
     </li>
@@ -2147,7 +2067,6 @@ td.ta-l {
     </li>
     <li class="list__item item__6 ">суббота
     </li>
-
   </ul>
 
 <!-- Weather widget by https://www.meteoservice.ru
@@ -2212,8 +2131,8 @@ td.ta-l {
       const updateTime = setInterval( setTime, 1000 );
 
       // mifomen #2
-      // const url = `#day-${new Date().getDay()}`;
-      const url = "#day-7";
+      const url = `#day-${new Date().getDay()}`;
+
 
       const changePositionTimer = (evt) => {
         if ( evt.target.id === 'day-6' || evt.target.id === 'day-5') {
