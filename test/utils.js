@@ -71,34 +71,49 @@ const renderAnswerArray = (data, parent, item) => {
     div.classList.add('grid-3x3');
   }
 
-  for (const answer of shuffleArray(item)) {
+  // for (const answer of shuffleArray(item)) {
+    let numberAnswer = 1;
+    for (const answer of item) {
+
+
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'answer';
+    // button.innerHTML = `${numberAnswer}. ${answer}`;
     button.innerHTML = answer;
-    button.onselectstart = 'return false';
-    button.onmousedown = 'return false';
+    // button.onselectstart = 'return false';
+    // button.onmousedown = 'return false';
 
     const allProgressItems = document.querySelectorAll('.progress-bar__item');
     button.onclick = (evt) => {
+
       document.querySelector('.progress-bar__item--active').disabled = 'true';
       choosenAnswers.push(evt.target.textContent);
+      // console.log("choosenAnswers " + choosenAnswers)
+
+
       clearQuestionArea();
       // console.log(`i=${i} allProgressItems.length=${allProgressItems.length} allProgressItems=${allProgressItems[0]}`);
       // allProgressItems[i].classList.add('progress-bar__item--active');
       if (i < allProgressItems.length) {
         allProgressItems[i].classList.add('progress-bar__item--active');
+
         let obj = findItemById(data, data[i].id);
+
         // console.log('obj= ',obj);
         renderTextQuestion(document.querySelector('.js-init-game'), obj);
         renderAnswerArray(data, document.querySelector('.js-init-game'), obj.arrayAnswers);
       }
       i++;
+      // numberAnswer++;
       if ( allProgressItems.length + 1 == i ) {
         showAnswers(data, choosenAnswers);
       }
+
     }
     div.appendChild(button);
+    // numberAnswer++
+
   }
   parent.appendChild(div);
 
@@ -149,6 +164,9 @@ const getData = (onSuccess) => {
 };
 
 let pointsTesting = 0;
+
+// const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
+
 const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
   document.querySelector('.js-init-game').classList.add('hidden');
   const div = document.createElement('div');
@@ -160,15 +178,22 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
     const spanElement = document.createElement('span');
     spanElement.classList.add('resaultAnswer');
 
-    spanElement.onselectstart = 'return false';
-    spanElement.onmousedown = 'return false';
+    // spanElement.onselectstart = 'return false';
+    // spanElement.onmousedown = 'return false';
 
-    if (choosenAnswers[i] === arrayRightAnswer[i].arrayAnswers[0]) {
+    // if (choosenAnswers[i] === arrayRightAnswer[i].arrayAnswers[0]) {
+    // console.log("allMass.numberRightAnswer " + allMass)
+    const indexRightAnswer = arrayRightAnswer[i].arrayAnswers[arrayRightAnswer[i].numberRightAnswer-1]
+
+    // if (choosenAnswers[i] === arrayRightAnswer[i].arrayAnswers[0]) {
+    if (choosenAnswers[i] === indexRightAnswer) {
       spanElement.classList.add('rightResaultAnswer');
       spanElement.innerHTML = `
         В вопросе №${i + 1}: <u> ${arrayRightAnswer[i].qustionText}</u>
         <span>Ваш ответ: <span class="red">правильный</span></span>
-        <span class="corrent-answer">${arrayRightAnswer[i].arrayAnswers[0]}</span>`;
+        <span class="corrent-answer">${indexRightAnswer}</span>`;
+        {/* <span class="corrent-answer">${arrayRightAnswer[i].arrayAnswers[0]}</span>`; */}
+
       pointsTesting++
     } else {
       spanElement.classList.add('loseResaultAnswer');
@@ -176,7 +201,8 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
         В вопросе №${i + 1}: <u> ${arrayRightAnswer[i].qustionText} </u>
         <span>Ваш ответ: <span class="red">неправильный</span></span>
         <span class="not-corrent-answer">${arrayGetAnswer[i]}</span>
-        <span>Правильный ответ: ${arrayRightAnswer[i].arrayAnswers[0]}</span>`;
+        <span>Правильный ответ: ${indexRightAnswer}</span>`;
+        // <span>Правильный ответ: ${arrayRightAnswer[i].arrayAnswers[0]}</span>`;
     }
     div.appendChild(spanElement);
   }
@@ -212,7 +238,7 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
   // console.log('uniqId',uniqId)
   localStorage.setItem(uniqId,`${inputTesterSurname.value} ${uniqId} ${localStorage.user} ${pointsTesting} из ${choosenAnswers.length}`);
   // console.log(`${parseInt(new Date().getTime() / 1000)}`)
-  console.log(localStorage)
+  // console.log(localStorage)
   // alert(localStorage)
   div.appendChild(spanElement);
   document.body.appendChild(div);

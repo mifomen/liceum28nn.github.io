@@ -5,9 +5,9 @@ const template = /\d\w/;
 // console.log(template.test("8Б"))
 
 const person = {
-  surname:"Горемыка",
-  name:"Иван",
-  class:"8А"
+  surname:"Кошелев",
+  name:"Илья",
+  class:"Стажер"
 };
 // console.log(`template.test(name)=${template.test(name)}`)
 
@@ -108,6 +108,10 @@ inputTesterSurname.placeholder = `${person.surname}`;
 inputTesterClass.placeholder = `${person.class}`;
 
 
+inputTesterName.value = `${person.name}`;
+inputTesterSurname.value = `${person.surname}`;
+inputTesterClass.value = `${person.class}`;
+
 
 inputTesterSurname.focus();
 inputTesterSurname.addEventListener('input', () => {
@@ -118,7 +122,7 @@ inputTesterSurname.addEventListener('input', () => {
     // btnStartDisabled(false);
     // document.querySelector('.js-btn-start').disabled = false;
   } else {
-    btnStartDisabled(true);
+  //  btnStartDisabled(false); //btnStartDisabled(true);
     // document.querySelector('.js-btn-start').disabled = true;
     inputTesterSurname.setCustomValidity('Должно быть только 1-а фамилия');
   }
@@ -130,10 +134,10 @@ inputTesterName.addEventListener('input', () => {
   // console.log(`valueToArray(inputTesterName).length=${valueToArray(inputTesterName).length}`);
   if (valueToArray(inputTesterName).length >= 1) {
     inputTesterName.value = inputTesterName.value.trim();
-    // btnStartDisabled(false);
+    btnStartDisabled(false);
     // document.querySelector('.js-btn-start').disabled = false;
   } else {
-    // btnStartDisabled(true);
+    btnStartDisabled(true);
     // document.querySelector('.js-btn-start').disabled = true;
     inputTesterName.setCustomValidity('Должно быть только имя');
   }
@@ -148,7 +152,7 @@ inputTesterClass.addEventListener('input', () => {
     btnStartDisabled(false);
     // document.querySelector('.js-btn-start').disabled = false;
   } else {
-    btnStartDisabled(true);
+    btnStartDisabled(false);
     // document.querySelector('.js-btn-start').disabled = true;
     inputTesterClass.setCustomValidity('Укажите класс 1 или 2 цифры и букву класса');
   }
@@ -157,3 +161,6 @@ inputTesterClass.addEventListener('input', () => {
 
 
 export { DATA_GET_URL };
+
+
+document.addEventListener("DOMContentLoaded", btnStartDisabled(false));
