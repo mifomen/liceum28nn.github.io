@@ -137,11 +137,11 @@ const pointsResault = (numberItem,rightAnswerLength) => {
 //  if (Math.round(numberItem*0.52) < numberItem) {
 //    return '2';
 //  }
-if (numberItem >= Math.round(rightAnswerLength*0.92) ) {
+if (numberItem >= Math.round(rightAnswerLength*0.85) ) {
   // console.log(`${Math.round(rightAnswerLength*0.92)} >= ${numberItem}`)
    return '5';
  }
- if (numberItem >= Math.floor(rightAnswerLength*0.75)  ) {
+ if (numberItem >= Math.floor(rightAnswerLength*0.70)  ) {
 
    return '4';
  }
@@ -218,8 +218,8 @@ const showAnswers = (arrayRightAnswer, arrayGetAnswer) => {
   spanElement.innerHTML=`${localStorage.user} овтетил:<br>${pointsTesting} правильных ответ(а) из ${choosenAnswers.length}<br>
   Ваша оценка ${pointsResault(pointsTesting,choosenAnswers.length)} <br>
   Оценка 3 если >= ${Math.floor(choosenAnswers.length*0.5)} правильных ответов (50%)<br>
-  Оценка 4 если >= ${Math.round(choosenAnswers.length*0.75)} правильных ответов (75%)<br>
-  Оценка 5 если >= ${Math.floor(choosenAnswers.length*0.92)} правильных ответов (90%)<br>
+  Оценка 4 если >= ${Math.round(choosenAnswers.length*0.70)} правильных ответов (75%)<br>
+  Оценка 5 если >= ${Math.floor(choosenAnswers.length*0.85)} правильных ответов (90%)<br>
   `;
 
   const   optionsTime  = {
