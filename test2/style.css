@@ -981,13 +981,15 @@ color: var(--basic-white);
 } */
 
 
+
+.question-image {
+  width: 50%;
+}
+
 @media (min-width: 100px) and (max-width: 768px) {
   .question-image {
     width: 100%;
   }
-}
-.question-image {
-  width: 50%;
 }
 
 .question-image--clicked {
