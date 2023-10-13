@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "qustionText": "Любая формалу в Excel начинает со знака",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["=","@", "!=", "<=="]
+  },
+  {
+    "id": 2,
+    "qustionText": "Какое значение получится в ячейке F2",
+    "questionImg": "img/question5/002.jpg",
+    "questionAudio": "",
+    "arrayAnswers": ["72","14","48","54"]
+  },
+  {
+    "id": 3,
+    "qustionText": "Какой вид примет формула при копировании из ячейки F1 в ячейку F3",
+    "questionImg": "img/question5/003.jpg",
+    "questionAudio": "",
+    "arrayAnswers": ["=A3+C4","=A2+C3","=B3+D4","=A2+D3"]
+  },
+  {
+    "id": 4,
+    "qustionText": "Какое числовое значение получится в ячейке D5, если в неё скопировать формулу из ячейки A5",
+    "questionImg": "img/question5/004.jpg",
+    "questionAudio": "",
+    "arrayAnswers": ["16","30","96","45"]
+  },
+  {
+    "id": 5,
+    "qustionText": "Какой вид примет формла при копировании из ячейки A5 в ячейку C6",
+    "questionImg": "img/question5/005.jpg",
+    "questionAudio": "",
+    "arrayAnswers": ["=C$1*D3","=C$3*D3","=D$1*E3","=C$2*D4"]
+  },
+  {
+    "id": 6,
+    "qustionText": "Какое числоваое значение получится в ячейке D5, если в неё скопировать формулу из ячейкт A5?",
+    "questionImg": "img/question5/006.jpg",
+    "questionAudio": "",
+    "arrayAnswers": ["7","8","9","70"]
+  },
+  {
+    "id": 7,
+    "qustionText": "Какого знака арифметического действия не существует в Excel",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["\\","+","-","*","/"]
+  },
+  {
+    "id": 8,
+    "qustionText": "Какое значение будет в ячейке D5, если протянуть формулу из ячейки D1",
+    "questionImg": "img/question5/008.jpg",
+    "questionAudio": "",
+    "arrayAnswers": ["154","98","242","174"]
+  },
+  {
+    "id": 9,
+    "qustionText": "Какой вид примет формула при копировании из ячейки А5 в ячейку С6 ?",
+    "questionImg": "img/question5/009.jpg",
+    "questionAudio": "",
+    "arrayAnswers": ["=$A$1/(C$4+$B6)","=$A$1/(C$4+$B4)","=$A$1/(B$4+$B6)","=$A$1/(C$6+$B6)"]
+  },
+  {
+    "id": 10,
+    "qustionText": "Какое числовое значение получится в ячейке С1?",
+    "questionImg": "img/question5/010.jpg",
+    "questionAudio": "",
+    "arrayAnswers": ["41","36","49","47"]
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "qustionText": "Выберите правильный ответ. <br> Процесс резания - ",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["1","2"]
+  },
+  {
+    "id": 2,
+    "qustionText": "Выберите правильный ответ. <br> Процесс резания - ",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["1","2"]
+  },
+  {
+    "id": 3,
+    "qustionText": "Выберите правильный ответ. <br> Процесс резания - ",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["1","2"]
+  },
+  {
+    "id": 4,
+    "qustionText": "Выберите правильный ответ. <br> Процесс резания - ",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["1","2"]
+  },
+  {
+    "id": 5,
+    "qustionText": "Выберите правильный ответ. <br> Процесс резания - ",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["1","2"]
+  },{
+    "id": 6,
+    "qustionText": "Выберите правильный ответ. <br> Процесс резания - ",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": ["1","2"]
+  }
+]

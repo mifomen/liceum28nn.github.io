@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link href="roboto.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="../cabinets/JetBrains.css">
+    <title>Test</title>
+  </head>
+  <body class="page-body js-body">
+    <div>
+      <label class="label-btn js-load-panel">1<input type="radio" class="js-test-1  input-btn js-load-input" id="buh" name="test" checked></label>
+      <label class="label-btn js-load-panel">2<input type="radio" class="js-test-2 js-load-input input-btn" name="test" id="platform"></label>
+      <button type="button" name="load-test" class="load-button js-load-btns">Загрузить вопросы</button>
+    </div>
+    <form class="frame-init-game">
+      <div class="bank-question">
+        <span class="bank-question__count js-bank-count"></span>
+      </div>
+      <div style="display: none;" class="test-info">
+        <h1 class="vh">Тесты по информатике и не только</h1>
+        <label class="label__tester-info" for="tester-info">Введите свою фамилию и имя</label>
+        <input autocomplete="off" placeholder="js does not work" id="tester-info" type="text" class="tester-info js-tester-info__surname" maxlength="15">
+        <input autocomplete="off" placeholder="js does not work" id="tester-info" type="text" class="tester-info js-tester-info__name" maxlength="10">
+        <input autocomplete="off" placeholder="js does not work" id="tester-info" type="text" class="tester-info js-tester-info__class" maxlength="3">
+      </div>
+      <div style="display: none;" class="checkers">
+        <label class="show-answer" for="showAnswer">
+        <input class="show-answer__input js-status-show-answer" id="showAnswer" type="checkbox">
+        Показывать правильный ответ после каждого вопроса
+        <span class="show-answer__checkbox"></span>
+      </label>
+      <label class="show-all-question" for="showAllquestion">
+        <input class="show-all-question__input js-status-show-all-question" id="showAllquestion" type="checkbox">
+        Показывать список вопросов с ответами
+        <span class="show-all-question__checkbox"></span>
+      </label>
+      <!-- <label class="check option">
+              <input class="check__input" type="checkbox">
+              <span class="check__box"></span>
+              Первый
+          </label> -->
+        </div>
+
+      <div class="frame-init-game__buttons">
+        <div class="frame-init-game__buttons--exam">
+          <button  style="display: none;"   data-name-random="true" data-name-test="questions8-1с-all.json" class="js-btn-exam btn-start-test js-btn-start" type="button">Экзамен по платформе</button>
+        </div>
+      <div class="all-buttons js-all-pulls-buttons"></div>
+
+
+
+      </div>
+    </form>
+    <div class="frame-start-game js-init-game hidden"></div>
+    <script src="api.js" type="module"></script>
+  </body>
+</html>
