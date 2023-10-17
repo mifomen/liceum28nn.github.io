@@ -560,8 +560,8 @@
       "5. Первое и второе"
     ],
     "numberRightAnswer": 4,
-    "clearAnswers": true,
-    "shuffleAnswers": true
+    "clearAnswers": false,
+    "shuffleAnswers": false
   },
   {
     "id": 32,
