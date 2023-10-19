@@ -560,8 +560,8 @@
       "5. Первое и второе"
     ],
     "numberRightAnswer": 4,
-    "clearAnswers": true,
-    "shuffleAnswers": true
+    "clearAnswers": false,
+    "shuffleAnswers": false
   },
   {
     "id": 32,
@@ -613,8 +613,8 @@
       "5. Все перечисленные"
     ],
     "numberRightAnswer": 5,
-    "clearAnswers": true,
-    "shuffleAnswers": true
+    "clearAnswers": false,
+    "shuffleAnswers": false
   },
   {
     "id": 35,
@@ -631,8 +631,8 @@
       "5. Все перечисленные команды"
     ],
     "numberRightAnswer": 5,
-    "clearAnswers": true,
-    "shuffleAnswers": true
+    "clearAnswers": false,
+    "shuffleAnswers": false
   },
   {
     "id": 36,
