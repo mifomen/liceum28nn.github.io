@@ -340,8 +340,9 @@ const showAnswerAsInTrainer = (questionArray) => {
                   numberRightAnswer++
                 // }
               } else {
-                evt.target.classList.add('loseAnswerOnCLick')
+                document.querySelector('.js-mark').classList.add('rightAnswerOnCLick')
 
+                evt.target.classList.add('loseAnswerOnCLick')
                 pullLoseQuestion.push(item)
                 // document.querySelector('.resaultAnswer .js-mark').classList.add('rightAnswerOnCLick')
               }
