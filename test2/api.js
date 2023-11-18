@@ -430,11 +430,21 @@ if (document.querySelector('.js-load-input')) {
   const btns = document.querySelectorAll('.js-load-input')
   btns.forEach((item) => {
     item.addEventListener('click', (evt) => {
-      console.log(evt.target.id)
-      localStorage.setItem('loadTest', evt.target.id);
+      evt.target.disabled = true;
     })
   })
 }
+
+// const allStartQuestBtns = querySelectorAll('.js-load-panel');
+// for (const btn of allStartQuestBtns) {
+//   btn.addEventListener('click', function (evt) {
+
+//   })
+// }
+
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // if (localStorage.getItem('loadTest') ==="buh") {
@@ -442,23 +452,15 @@ document.addEventListener("DOMContentLoaded", () => {
   //   document.querySelector('.js-load-btns').click();
   //   return;
   // }
-  // if (localStorage.getItem('loadTest') ==="platform") {
-  //   document.querySelector('.js-test-2').checked;
-  //   document.querySelector('.js-load-btns').click();
-  //   return;
-  // }
+
 
     if (document.querySelector('.js-load-btns')) {
       const name = setTimeout((evt) => {
-        document.querySelector('.js-load-btns').click()
+        // document.querySelector('.js-load-btns').click() //mifomen
       },500
     )
   }
-  // getData((allArrayQuestions) => {
-  // console.log(allArrayQuestions.length);
-  // showNumberBtn(allArrayQuestions);
-  // showBankQuestionPull(allArrayQuestions.length);
-  // checkChoosenQuestion(allArrayQuestions.length);
+
 });
 
   const  loadQuestion = () => {
@@ -470,8 +472,14 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 }
 
-  const elem123 = document.querySelector('.js-load-btns');
-  elem123.addEventListener('click', loadQuestion);
+  // const elem123 = document.querySelector('.js-load-btns');
+  const elem123 = document.querySelectorAll('.input-btn');
+
+for  (const elem of elem123) {
+  elem.addEventListener('click', loadQuestion);
+}
+
+  // elem123.addEventListener('click', loadQuestion);
 
 
 

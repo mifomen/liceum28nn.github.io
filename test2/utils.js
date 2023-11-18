@@ -172,90 +172,44 @@ const hideElements = () => {
 }
 
 // let URL;
-const choosePullQuestions= (evt) => {
-  let name;
-  name = 'ut.json'
-  const allQuests = document.querySelectorAll('.js-load-input');
+const choosePullQuestions = (evt) => {
+  // console.log(`${evt.target.id}.json`);
+  const name = `${evt.target.id}.json`
+  return name;
+  // let name;
+  // name = 'ut.json'
+  // const allQuests = document.querySelectorAll('.js-load-input');
 
-  allQuests.forEach(item => {
-    item.addEventListener('click', function(evt) {
-      console.log(evt.target)
-      name = `${evt.target.id}.json`
-    })
-  });
+  // for (const elemQuests of allQuests) {
+  //   elemQuests.addEventListener('click', function() {
+  //     console.log(`evt.target.id=${evt.target.id} ${evt.target.id}.json`)
+  //     return `${evt.target.id}.json`
+  //   })
+  // }
+
+  // allQuests.forEach(item => {
+  //   item.addEventListener('click', function(evt) {
+  //     console.log(evt.target)
+  //     name = `${evt.target.id}.json`
+  //   })
+  // });
 
   // name = `${evt.target.id}.json`
-  return name;
+  // return name;
 };
 
-// const renderChoiseTest = () => {
-//   // document.querySelector('.js-body') ||
-//   if (false ) {
-//   const body = document.querySelector('.js-body')
-//   console.log('nice find body')
 
-//   const labelChoise = document.createElement('label');
-//   labelChoise.type="radio";
-//   labelChoise.textContent="Тест 1С Бухгалтерия по платформе"
-//   labelChoise.classList.add('label-btn');
-//   labelChoise.for="testChoose";
-//   labelChoise.classList.add('js-load-pangel');
+// const btnForLoad = document.querySelector('.js-load-btns'); was
+const btnForLoads = document.querySelectorAll('.js-load-panel');
+
+for (const btnForLoad of btnForLoads) {
+  btnForLoad.addEventListener('click',choosePullQuestions);
+}
+// js-load-panel
 
 
-
-//   const inputChoise = document.createElement('input');
-//   inputChoise.type="radio";
-//   // inputChoise.classList.add('vh');
-//   // inputChoise.textContent="Тест 1С Профессионал по платформе"
-//   inputChoise.classList.add('input-btn');
-//   inputChoise.id="buh";
-//   inputChoise.name="test"
-//   inputChoise.checked = true;
-//   inputChoise.classList.add('js-load-pangel');
-//   labelChoise.appendChild(inputChoise);
-//   body.appendChild(labelChoise);
-
-//   const labelChoise2 = document.createElement('label');
-//   labelChoise2.type="radio";
-//   labelChoise2.textContent="Тест 1С Профессионал по платформе"
-//   labelChoise2.classList.add('label-btn');
-//   labelChoise2.classList.add('js-load-pangel');
-//   labelChoise2.for="testChoose";
-//   body.appendChild(labelChoise2);
-
-
-//   const inputChoise2 = document.createElement('input');
-//   inputChoise2.type="radio";
-//   // inputChoise2.style.cssText="display: none;";
-//   inputChoise2.textContent="";
-//   inputChoise2.classList.add('js-load-pangel');
-//   inputChoise2.name="test";
-//   inputChoise2.classList.add('input-btn');
-//   inputChoise2.id="platform";
-//   labelChoise2.appendChild(inputChoise2);
-//   body.appendChild(labelChoise2);
-//   // body.appendChild(inputChoise2);
-
-
-
-//   const btnForLoad = document.createElement('button');
-//   btnForLoad.type="button";
-//   // btnForLoad.style.cssText="display: none;";
-//   btnForLoad.textContent="Загрузить вопросы";
-//   btnForLoad.name="load-test";
-//   btnForLoad.classList.add('load-button');
-//   btnForLoad.classList.add('js-load-pangel');
-//   btnForLoad.classList.add('js-load-btns')
-//   btnForLoad.addEventListener('click', hideElements);
-//   btnForLoad.addEventListener('click', choosePullQuestions);
-//   body.appendChild(btnForLoad);
-//  }
-// };
-
-
-const btnForLoad = document.querySelector('.js-load-btns')
 // btnForLoad.addEventListener('click', hideElements);
-btnForLoad.addEventListener('click', choosePullQuestions);
+// btnForLoad.addEventListener('click', choosePullQuestions); //was
 
 
 // renderChoiseTest();
@@ -265,7 +219,7 @@ const pullQuestion = ['buh.json', 'platform.json'];
 
 const getData = (onSuccess) => {
   // const URL = choosePullQuestions()
-  fetch(choosePullQuestions())
+  fetch(choosePullQuestions)
     .then((response) => response.json())
     .then((questionsArray) => {
       onSuccess(questionsArray);
