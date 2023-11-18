@@ -174,10 +174,20 @@ const hideElements = () => {
 // let URL;
 const choosePullQuestions= (evt) => {
 
+  if (document.querySelector('#ut').checked) {
+    // console.log('выбрана бухгалтерия')
+    // URL = 'buh.json';
+    return 'ut.json';
+  }
   if (document.querySelector('#buh').checked) {
     // console.log('выбрана бухгалтерия')
     // URL = 'buh.json';
     return 'buh.json';
+  }
+  if (document.querySelector('#zup').checked) {
+    // console.log('выбрана бухгалтерия')
+    // URL = 'zup.json';
+    return 'zup.json';
   }
   if (document.querySelector('#platform').checked) {
     console.log('выбрана платформа')
