@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "qustionText": "8470_01001 Выделенная на рисунке область называется",
+    "theme": "platform",
+    "subTheme": "01.Интерфейс программы",
+    "questionImg": "img/buh/buh-001.png",
+    "questionAudio": "",
+    "arrayAnswers": [
+      "1. UTUTПанель функций",
+      "2. Панель разделов",
+      "3. Область команд, навигации и действий",
+      "4. Панель инструментов",
+      "5. Главное меню"
+    ],
+    "numberRightAnswer": 3,
+    "clearAnswers": true,
+    "shuffleAnswers": true
+  }
+]
