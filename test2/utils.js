@@ -158,12 +158,12 @@ if (numberItem >= Math.round(rightAnswerLength*0.85) ) {
 
 
 const hideElements = () => {
-  console.log('hide')
+  // console.log('hide')
   if (document.querySelector('.js-load-panel')) {
     document.querySelector('.js-load-btns').style.display='none';
 
     const all = document.querySelectorAll('.js-load-panel')
-    console.log(all.length)
+    // console.log(all.length)
     all.forEach((item) => {
       item.style.display='none';
       // item.remove()
@@ -173,96 +173,88 @@ const hideElements = () => {
 
 // let URL;
 const choosePullQuestions= (evt) => {
+  let name;
+  name = 'ut.json'
+  const allQuests = document.querySelectorAll('.js-load-input');
 
-  if (document.querySelector('#ut').checked) {
-    // console.log('выбрана бухгалтерия')
-    // URL = 'buh.json';
-    return 'ut.json';
-  }
-  if (document.querySelector('#buh').checked) {
-    // console.log('выбрана бухгалтерия')
-    // URL = 'buh.json';
-    return 'buh.json';
-  }
-  if (document.querySelector('#zup').checked) {
-    // console.log('выбрана бухгалтерия')
-    // URL = 'zup.json';
-    return 'zup.json';
-  }
-  if (document.querySelector('#platform').checked) {
-    console.log('выбрана платформа')
-    // URL = 'platform.json';
-    return 'platform.json';
-  }
+  allQuests.forEach(item => {
+    item.addEventListener('click', function(evt) {
+      console.log(evt.target)
+      name = `${evt.target.id}.json`
+    })
+  });
+
+  // name = `${evt.target.id}.json`
+  return name;
 };
 
-const renderChoiseTest = () => {
-  // document.querySelector('.js-body') ||
-  if (false ) {
-  const body = document.querySelector('.js-body')
-  console.log('nice find body')
+// const renderChoiseTest = () => {
+//   // document.querySelector('.js-body') ||
+//   if (false ) {
+//   const body = document.querySelector('.js-body')
+//   console.log('nice find body')
 
-  const labelChoise = document.createElement('label');
-  labelChoise.type="radio";
-  labelChoise.textContent="Тест 1С Бухгалтерия по платформе"
-  labelChoise.classList.add('label-btn');
-  labelChoise.for="testChoose";
-  labelChoise.classList.add('js-load-pangel');
-
-
-
-  const inputChoise = document.createElement('input');
-  inputChoise.type="radio";
-  // inputChoise.classList.add('vh');
-  // inputChoise.textContent="Тест 1С Профессионал по платформе"
-  inputChoise.classList.add('input-btn');
-  inputChoise.id="buh";
-  inputChoise.name="test"
-  inputChoise.checked = true;
-  inputChoise.classList.add('js-load-pangel');
-  labelChoise.appendChild(inputChoise);
-  body.appendChild(labelChoise);
-
-  const labelChoise2 = document.createElement('label');
-  labelChoise2.type="radio";
-  labelChoise2.textContent="Тест 1С Профессионал по платформе"
-  labelChoise2.classList.add('label-btn');
-  labelChoise2.classList.add('js-load-pangel');
-  labelChoise2.for="testChoose";
-  body.appendChild(labelChoise2);
-
-
-  const inputChoise2 = document.createElement('input');
-  inputChoise2.type="radio";
-  // inputChoise2.style.cssText="display: none;";
-  inputChoise2.textContent="";
-  inputChoise2.classList.add('js-load-pangel');
-  inputChoise2.name="test";
-  inputChoise2.classList.add('input-btn');
-  inputChoise2.id="platform";
-  labelChoise2.appendChild(inputChoise2);
-  body.appendChild(labelChoise2);
-  // body.appendChild(inputChoise2);
+//   const labelChoise = document.createElement('label');
+//   labelChoise.type="radio";
+//   labelChoise.textContent="Тест 1С Бухгалтерия по платформе"
+//   labelChoise.classList.add('label-btn');
+//   labelChoise.for="testChoose";
+//   labelChoise.classList.add('js-load-pangel');
 
 
 
-  const btnForLoad = document.createElement('button');
-  btnForLoad.type="button";
-  // btnForLoad.style.cssText="display: none;";
-  btnForLoad.textContent="Загрузить вопросы";
-  btnForLoad.name="load-test";
-  btnForLoad.classList.add('load-button');
-  btnForLoad.classList.add('js-load-pangel');
-  btnForLoad.classList.add('js-load-btns')
-  btnForLoad.addEventListener('click', hideElements);
-  btnForLoad.addEventListener('click', choosePullQuestions);
-  body.appendChild(btnForLoad);
- }
-};
+//   const inputChoise = document.createElement('input');
+//   inputChoise.type="radio";
+//   // inputChoise.classList.add('vh');
+//   // inputChoise.textContent="Тест 1С Профессионал по платформе"
+//   inputChoise.classList.add('input-btn');
+//   inputChoise.id="buh";
+//   inputChoise.name="test"
+//   inputChoise.checked = true;
+//   inputChoise.classList.add('js-load-pangel');
+//   labelChoise.appendChild(inputChoise);
+//   body.appendChild(labelChoise);
+
+//   const labelChoise2 = document.createElement('label');
+//   labelChoise2.type="radio";
+//   labelChoise2.textContent="Тест 1С Профессионал по платформе"
+//   labelChoise2.classList.add('label-btn');
+//   labelChoise2.classList.add('js-load-pangel');
+//   labelChoise2.for="testChoose";
+//   body.appendChild(labelChoise2);
+
+
+//   const inputChoise2 = document.createElement('input');
+//   inputChoise2.type="radio";
+//   // inputChoise2.style.cssText="display: none;";
+//   inputChoise2.textContent="";
+//   inputChoise2.classList.add('js-load-pangel');
+//   inputChoise2.name="test";
+//   inputChoise2.classList.add('input-btn');
+//   inputChoise2.id="platform";
+//   labelChoise2.appendChild(inputChoise2);
+//   body.appendChild(labelChoise2);
+//   // body.appendChild(inputChoise2);
+
+
+
+//   const btnForLoad = document.createElement('button');
+//   btnForLoad.type="button";
+//   // btnForLoad.style.cssText="display: none;";
+//   btnForLoad.textContent="Загрузить вопросы";
+//   btnForLoad.name="load-test";
+//   btnForLoad.classList.add('load-button');
+//   btnForLoad.classList.add('js-load-pangel');
+//   btnForLoad.classList.add('js-load-btns')
+//   btnForLoad.addEventListener('click', hideElements);
+//   btnForLoad.addEventListener('click', choosePullQuestions);
+//   body.appendChild(btnForLoad);
+//  }
+// };
 
 
 const btnForLoad = document.querySelector('.js-load-btns')
-btnForLoad.addEventListener('click', hideElements);
+// btnForLoad.addEventListener('click', hideElements);
 btnForLoad.addEventListener('click', choosePullQuestions);
 
 
