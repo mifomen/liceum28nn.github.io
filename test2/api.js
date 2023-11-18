@@ -451,7 +451,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (document.querySelector('.js-load-btns')) {
       const name = setTimeout((evt) => {
         document.querySelector('.js-load-btns').click()
-      },1000
+      },500
     )
   }
   // getData((allArrayQuestions) => {
