@@ -171,10 +171,20 @@ const hideElements = () => {
   }
 }
 
+const disabledStartBtns = () => {
+  const startBtns = document.querySelectorAll('.js-panel-start-question button');
+  // console.log(startBtns)
+  for (const btn of startBtns) {
+    btn.disabled = true;
+  }
+}
+
 // let URL;
 const choosePullQuestions = (evt) => {
-  // console.log(`${evt.target.id}.json`);
-  const name = `${evt.target.id}.json`
+
+  // console.log(`${evt.target}.json`);
+  // let name = `${evt.target.id}.json`
+  const name = 'ut.json'
   return name;
   // let name;
   // name = 'ut.json'
@@ -204,6 +214,8 @@ const btnForLoads = document.querySelectorAll('.js-load-panel');
 
 for (const btnForLoad of btnForLoads) {
   btnForLoad.addEventListener('click',choosePullQuestions);
+  btnForLoad.addEventListener('click',disabledStartBtns);
+  // btnForLoad.();
 }
 // js-load-panel
 
@@ -219,7 +231,7 @@ const pullQuestion = ['buh.json', 'platform.json'];
 
 const getData = (onSuccess) => {
   // const URL = choosePullQuestions()
-  fetch(choosePullQuestions)
+  fetch(choosePullQuestions())
     .then((response) => response.json())
     .then((questionsArray) => {
       onSuccess(questionsArray);

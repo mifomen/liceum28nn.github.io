@@ -454,9 +454,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // }
 
 
-    if (document.querySelector('.js-load-btns')) {
+    if (document.querySelector('#ut')) {
       const name = setTimeout((evt) => {
+        // console.log('timer')
         // document.querySelector('.js-load-btns').click() //mifomen
+        document.querySelector('#ut').click() //mifomen
       },500
     )
   }
