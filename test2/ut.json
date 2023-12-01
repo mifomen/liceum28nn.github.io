@@ -32,5 +32,24 @@
     "numberRightAnswer": 4,
     "clearAnswers": false,
     "shuffleAnswers": false
+  },
+  {
+    "id": 0,
+    "qustionText": "01.03 Новый курс валюты ...",
+    "theme": "platform",
+    "subTheme": "01.Подготовительный этап",
+    "questionImg": "",
+    "questionAudio": "",
+    "arrayAnswers": [
+      "1. Вводится вручную.",
+      "2. Загружается из Интернета.",
+      "3. Зависит от курса другой валюты.",
+      "4. Рассчитывается по формуле.",
+      "5. Верны утверждения 1, 2 и 3.",
+      "6. Верны все утверждения."
+    ],
+    "numberRightAnswer": 6,
+    "clearAnswers": false,
+    "shuffleAnswers": false
   }
 ]
