@@ -244,30 +244,39 @@ const getIdElem = (evt) => {
 }
 
 
-const all = document.querySelectorAll('.js-load-panel');
-for (const btn of all) {
+// const all = document.querySelectorAll('.js-load-panel');
+// for (const btn of all) {
   // btn.addEventListener('click',testClick)
-}
-
+// }
 
 const pullQuestion = ['us.json','zup.json','buh.json', 'platform.json'];
+console.log(document.querySelector('.js-load-panel').dataset.count);
+// function fCLick (evt) {
+//   let name;
+//   console.log(evt.target.innerHTML)
+//   name =  evt.target.innerHTML
+//   console.log('name=' + name)
+//   return evt.target.innerHTML
+// }
+function chooseTest () {
 
-const chooseTest = () => {
-  const all = document.querySelectorAll('.js-load-panel');
-  for (const btn of all) {
-    btn.addEventListener('click', function () {
-      console.log(btn.id + '.json')
-      return btn.id + '.json';
+
+  const allInitButtons = document.querySelectorAll('.js-load-panel');
+  for (let i; i++; allInitButtons.length) {
+    return f
+    allInitButtons[i].addEventListener('click', function () {
+      let name;
+      console.log(evt.target.innerHTML)
+      name =  evt.target.innerHTML
+      console.log('name=' + name)
+      return evt.target.innerHTML
     })
   }
 }
-
-
 const getData = (onSuccess) => {
   // const URL = choosePullQuestions()
-  // url = testClick();
-  fetch(choosePullQuestions())
-  // fetch(url)
+  // fetch(choosePullQuestions()) //mifomen
+  fetch(chooseTest())
     .then((response) => response.json())
     .then((questionsArray) => {
       onSuccess(questionsArray);

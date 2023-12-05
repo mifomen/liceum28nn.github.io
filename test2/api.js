@@ -300,17 +300,17 @@ const startGameOnClick = (evt) => {
 };
 
 document.addEventListener("DOMContentLoaded", btnStartDisabled(false));
-document.addEventListener("DOMContentLoaded", () => {
-  // console.log(`localStorage.getItem('statusShowAnswer') = ${localStorage.getItem('statusShowAnswer')}`)
-  const inputCheckBox = document.querySelector(".js-status-show-answer");
-  if (localStorage.getItem("statusShowAnswer") === "true") {
-    inputCheckBox.checked = true;
-  } else {
-    inputCheckBox.checked = false;
-  }
+// document.addEventListener("DOMContentLoaded", () => {
+//   // console.log(`localStorage.getItem('statusShowAnswer') = ${localStorage.getItem('statusShowAnswer')}`)
+//   const inputCheckBox = document.querySelector(".js-status-show-answer");
+//   if (localStorage.getItem("statusShowAnswer") === "true") {
+//     inputCheckBox.checked = true;
+//   } else {
+//     inputCheckBox.checked = false;
+//   }
 
 
-});
+// });
 
 const clearLocalStorage = () => {
   const result = prompt("Снять зеленое выделение с открытых тестов?", "Да");
@@ -471,11 +471,11 @@ document.addEventListener("DOMContentLoaded", () => {
   //   document.querySelector('.js-load-btns').click();
   //   return;
   // }
-  initClickForStartTest(111000);
+  initClickForStartTest(1000); //mifomen
 
 });
 
-  const  loadQuestion = () => {
+  const loadQuestion = () => {
     getData((allArrayQuestions) => {
       // console.log(allArrayQuestions.length);
       showNumberBtn(allArrayQuestions);
