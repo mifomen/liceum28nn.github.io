@@ -182,10 +182,21 @@ const disabledStartBtns = () => {
 // let URL;
 const choosePullQuestions = (evt) => {
 
-  // console.log(`${evt.target}.json`);
-  // let name = `${evt.target.id}.json`
-  const name = 'ut.json'
-  return name;
+  // console.log(evt.target.id + '.json');
+  // let name = evt.target.id + '.json'
+ let inputMonthlyBill;
+  if (!evt) {
+    inputMonthlyBill = 'ut.json'
+  }  else {
+    inputMonthlyBill = evt.target.id;
+  }
+
+  // inputMonthlyBill = inputMonthlyBill + '.json';
+
+  // name = inputMonthlyBill;
+  return inputMonthlyBill;
+  // const name = 'ut.json'
+  // return name;
   // let name;
   // name = 'ut.json'
   // const allQuests = document.querySelectorAll('.js-load-input');
