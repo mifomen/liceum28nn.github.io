@@ -1028,3 +1028,16 @@ width: 100%;
   color: #000;
   background-color: rgb(223, 243, 8);
 }
+
+/*
+.label-btn {
+  outline: 1px solid grey;
+  padding: 2px 7px;
+}
+
+.label-btn:hover {
+  outline: 1px solid grey;
+  padding: 2px 7px;
+  background-color: green;
+  color: white;
+} */

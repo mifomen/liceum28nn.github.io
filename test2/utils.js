@@ -172,34 +172,34 @@ const hideElements = () => {
 }
 
 const disabledStartBtns = () => {
-  const startBtns = document.querySelectorAll('.js-panel-start-question button');
+  const startBtns = document.querySelectorAll('.js-load-panel');
   // console.log(startBtns)
   for (const btn of startBtns) {
-    btn.disabled = true;
+     //btn.disabled = true; // mifomen
   }
 }
 
 // let URL;
 const choosePullQuestions = (evt) => {
-
+// console.log('choosePullQuestions')
   // console.log(evt.target.id + '.json');
   // let name = evt.target.id + '.json'
- let inputMonthlyBill;
-  if (!evt) {
-    inputMonthlyBill = 'ut.json'
-  }  else {
-    inputMonthlyBill = evt.target.id;
-  }
+//  let inputMonthlyBill;
+//   if (!evt) {
+//     inputMonthlyBill = 'ut.json'
+//   }  else {
+//     inputMonthlyBill = evt.target.id;
+//   }
 
   // inputMonthlyBill = inputMonthlyBill + '.json';
 
   // name = inputMonthlyBill;
-  return inputMonthlyBill;
+  // return inputMonthlyBill;
   // const name = 'ut.json'
   // return name;
   // let name;
-  // name = 'ut.json'
-  // const allQuests = document.querySelectorAll('.js-load-input');
+  return 'ut.json'
+  // const allQuests = document.querySelectorAll('.js-load-panel');
 
   // for (const elemQuests of allQuests) {
   //   elemQuests.addEventListener('click', function() {
@@ -237,12 +237,37 @@ for (const btnForLoad of btnForLoads) {
 
 // renderChoiseTest();
 // console.log('renderChoiseTest();= ' + renderChoiseTest());
+const getIdElem = (evt) => {
+  console.log(evt.target.id + '.json')
+  evt.target.removeEventListener('click',getIdElem)
+  return evt.target.id + '.json'
+}
 
-const pullQuestion = ['buh.json', 'platform.json'];
+
+const all = document.querySelectorAll('.js-load-panel');
+for (const btn of all) {
+  // btn.addEventListener('click',testClick)
+}
+
+
+const pullQuestion = ['us.json','zup.json','buh.json', 'platform.json'];
+
+const chooseTest = () => {
+  const all = document.querySelectorAll('.js-load-panel');
+  for (const btn of all) {
+    btn.addEventListener('click', function () {
+      console.log(btn.id + '.json')
+      return btn.id + '.json';
+    })
+  }
+}
+
 
 const getData = (onSuccess) => {
   // const URL = choosePullQuestions()
+  // url = testClick();
   fetch(choosePullQuestions())
+  // fetch(url)
     .then((response) => response.json())
     .then((questionsArray) => {
       onSuccess(questionsArray);

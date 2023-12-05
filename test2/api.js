@@ -1,5 +1,6 @@
 // import { points } from './data.js';
 import {
+  // chooseTest,
   showRightAnswers,
   saveHowOpenAnswer,
   checkOnRightIdOnItems,
@@ -426,8 +427,8 @@ if (document.querySelector('.js-load-btns')) {
   })
 }
 
-if (document.querySelector('.js-load-input')) {
-  const btns = document.querySelectorAll('.js-load-input')
+if (document.querySelector('.js-load-panel')) {
+  const btns = document.querySelectorAll('.js-load-panel')
   btns.forEach((item) => {
     item.addEventListener('click', (evt) => {
       evt.target.disabled = true;
@@ -443,8 +444,26 @@ if (document.querySelector('.js-load-input')) {
 // }
 
 
+// let mama ='';
+const initClickForStartTest = (TIME) => {
+  if (document.querySelector('#ut')) {
+    const name = setTimeout((evt) => {
+      // console.log('timer')
+      // document.querySelector('.js-load-btns').click() //mifomen
+      document.querySelector('#ut').click() //mifomen
+      // mama = chooseTest();
+      // console.log('mama= ' + mama)
+    },TIME
+  )
+}
 
 
+}
+
+// const initBtn = document.querySelectorAll('.js-load-panel');
+// for (const btn of initBtn) {
+//   btn.addEventListener('click',initClickForStartTest)
+// }
 
 document.addEventListener("DOMContentLoaded", () => {
   // if (localStorage.getItem('loadTest') ==="buh") {
@@ -452,16 +471,7 @@ document.addEventListener("DOMContentLoaded", () => {
   //   document.querySelector('.js-load-btns').click();
   //   return;
   // }
-
-
-    if (document.querySelector('#ut')) {
-      const name = setTimeout((evt) => {
-        // console.log('timer')
-        // document.querySelector('.js-load-btns').click() //mifomen
-        document.querySelector('#ut').click() //mifomen
-      },500
-    )
-  }
+  initClickForStartTest(111000);
 
 });
 
@@ -475,7 +485,7 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
   // const elem123 = document.querySelector('.js-load-btns');
-  const elem123 = document.querySelectorAll('.input-btn');
+  const elem123 = document.querySelectorAll('.js-load-panel');
 
 for  (const elem of elem123) {
   elem.addEventListener('click', loadQuestion);
